@@ -1,0 +1,197 @@
+<html><head><meta charset='utf-8'><title>详细终端列表</title>
+<style>
+*{margin:0;padding:0;}
+.clearfix:after{display:block;content:'';clear:both;}
+.clearfix{zoom:1;}
+ul{list-style:none;border:1px solid #666;margin-top:-1px;}
+div{width:1204px;margin:50px auto;}
+.header{width:1202px;height:30px;background:#ccc;}
+.header li{ font-weight:bold;}
+li{float:left;text-align:center;line-height:30px;}
+.header_one{width:80px;}
+.header_two{width:150px;}
+.header_three{width:200px;}
+.header_four{width:650px;}
+.header_five{width:50px;}
+.color{background:#e7eae9;}
+#box{margin:0;position:absolute;}
+
+.btn{position:absolute;top:30px;right:50px;width:500px;height:40px;margin:0;}
+.btn input{width:100px;height:30px;border:none;outline:none; border-radius:5px 5px 5px 5px;cursor:pointer;}
+.btn_one{background:yellow;}
+.btn_two{background:red;}
+.btn_three{background:#00C;}
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('box');
+	var aUl=oDiv.getElementsByTagName('ul');
+	var aLi=getByClass(oDiv,'reg');
+	var oBox=document.getElementById('btn');
+	var aBtn=oBox.getElementsByTagName('input');
+	
+	
+	
+	var reg_one=/^D\//g;
+	var reg_two=/E\//g;
+	var reg_three=/W\//g;
+	var reg_four=/I\//g;
+	
+	aBtn[0].onclick=function (){
+		for (var i=0;i<aLi.length;i++)
+		{	
+			var str=aLi[i].innerHTML;
+			console.log(str);
+			console.log(reg_one);
+			if (!reg_one.test(str))
+			{
+				aLi[i].parentNode.parentNode.removeChild(aLi[i].parentNode);
+				i--;
+				
+			}
+			
+		}	
+	};
+	
+	aBtn[1].onclick=function (){
+		for (var i=0;i<aLi.length;i++)
+		{	
+			var str=aLi[i].innerHTML;
+			
+			console.log(i)
+			if ( ! reg_two.test(str))
+			{
+				aLi[i].parentNode.parentNode.removeChild(aLi[i].parentNode);
+			}
+		
+		}	
+	};
+	
+	aBtn[2].onclick=function (){
+		for (var i=0;i<aLi.length;i++)
+		{	
+			var str=aLi[i].innerHTML;
+			if ( ! reg_three.test(str))
+			{
+				aLi[i].parentNode.parentNode.removeChild(aLi[i].parentNode);
+			}
+		}	
+	};
+	
+	aBtn[3].onclick=function (){
+		for (var i=0;i<aLi.length;i++)
+		{	
+			var str=aLi[i].innerHTML;
+			if ( ! reg_four.test(str))
+			{
+				aLi[i].parentNode.parentNode.removeChild(aLi[i].parentNode);
+			}
+		}	
+	};
+	
+	function getByClass(oParent,sClass){
+		if(oParent.getElementsByClassName){
+			return oParent.getElementsByClassName(sClass);
+		}else{
+			var arr=[];
+			var reg=new RegExp('\\b'+sClass+'\\b');
+			var aEle=oParent.getElementsByTagName('*');
+			for(var i=0; i<aEle.length; i++){
+				if(reg.test(aEle[i].className)){
+					arr.push(aEle[i]);
+				}
+			}
+			return arr;
+		}
+	}
+	
+	
+	for (var i=0;i<aLi.length;i++)
+	{
+		var str=aLi[i].innerHTML;
+		if (reg_one.test(str))
+		{}
+		else if(reg_two.test(str))
+		{
+			aLi[i].parentNode.style.color='red';
+		}
+		else if(reg_three.test(str))
+		{
+			aLi[i].parentNode.style.color='yellow';
+		}
+		else if(reg_four.test(str))
+		{
+			aLi[i].parentNode.style.color='#00F';
+		}
+	}
+	
+	/*document.onmousemove=function (ev){
+		var oEvent=ev || event;
+		for (var i=0;i<aUl.length;i++)
+		{
+			var a=Math.abs(oEvent.clientY-(aUl[i].offsetTop+oDiv.offsetTop+aUl[i].offsetHeight/2));
+			
+			var scale=(1-a/100).toFixed(2);
+			(scale<0.5) && (scale=0.5);
+			var aLi=aUl[i].getElementsByTagName('li');
+			for (var j=0;j<aLi.length;j++)
+			{
+				aLi[j].style.height=60*scale+'px';
+				aLi[j].style.lineHeight=60*scale+'px';
+				aLi[j].style.fontSize=28*scale+'px';
+			}
+			console.log(aLi.length)
+		}
+	};*/
+};
+</script>
+</head>
+<h2 align='center'>设备测试Log日志</h2>
+<body>
+<div class="btn" id="btn">
+	<input type="button" value="D" class="btn_one" />
+	<input type="button" value="E" class="btn_two" />
+	<input type="button" value="W" class="btn_three" />
+	<input type="button" value="I" class="btn_four" />
+</div>
+<div>
+	<ul class='header clearfix'>
+	<li class='header_one'>序列号</li>
+	<li class='header_five'>Level</li>
+	<li class='header_two'>时间</li>
+	<li class='header_three'>activity</li>
+	<li class='header_four'>message</li>
+</ul>
+<div id="box">
+<ul class='center color clearfix'>
+	<li class='header_one'>#1</li>
+	<li class='header_five'>D</li>
+	<li class='header_two'> 15:19:29</li>
+	<li class='header_three reg'>D/ActivityManager( 1028)</li>
+	<li class='header_four'> removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager</li>
+</ul>
+<ul class='center color clearfix'>
+	<li class='header_one'>#1</li>
+	<li class='header_five'>E</li>
+	<li class='header_two'> 15:19:29</li>
+	<li class='header_three reg'>E/ActivityManager( 1028)</li>
+	<li class='header_four'> removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager</li>
+</ul>
+<ul class='center color clearfix'>
+	<li class='header_one'>#1</li>
+	<li class='header_five'>E</li>
+	<li class='header_two'> 15:19:29</li>
+	<li class='header_three reg'>W/ActivityManager( 1028)</li>
+	<li class='header_four'> removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager</li>
+</ul>
+<ul class='center color clearfix'>
+	<li class='header_one'>#1</li>
+	<li class='header_five'>E</li>
+	<li class='header_two'> 15:19:29</li>
+	<li class='header_three reg'>I/ActivityManager( 1028)</li>
+	<li class='header_four'> removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager removeDeletedPkgsFromLruStats called in AMS...com.example.android.contactmanager</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
