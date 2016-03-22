@@ -2,15 +2,26 @@
 <html>
 <head lang="en">
 <meta charset="UTF-8">
-<title>聂振科个人网站</title>
+<title>keknei</title>
 <link rel="stylesheet" href="stylesheets/base.css" />
 <link rel="stylesheet" href="stylesheets/animate.css"> 
-
+<link rel="stylesheet" href="stylesheets/swiper.min.css">
+   
 <style>
+html,body{
+	height:100%;
+	overflow: hidden;
+}
+.swiper-container{
+	height:100%;
+}
+.swiper-slide{
+	height:100%;
+}
 
 .header{
 	width:100%;
-	height:666px;
+	-height:666px;
 	background:url("images/index.jpg") no-repeat center;
 	background-size:cover;
 	position:relative;
@@ -81,23 +92,36 @@
 .i_btn_left{top:150px;height:10px;width:2px;left:0;}
 .h_btn_right:hover .i_btn_left{top:0;left:0;height:40px;opacity:1;}
 
-.center{width:100%;height:700px;background:url("images/center_move.jpg") no-repeat center;background-size:cover;position:relative;}
+.center{background:url(images/b95bb9aa6f066dc260cb99ef2e03e3a5.jpg) no-repeat;background-size:100%;}
+.center ul{width:780px;margin:0 auto;margin-top:120px;}
+.center li{width:200px;height:200px;float:left;margin:30px;border-radius:50%;overflow:hidden; position:relative;}
+
+.center a{position:absolute; top:0; left:-250px; width:100%; height:100%; background:#fff; opacity:0.7; font-size:36px; text-align:center;line-height:200px;color:#000;font-weight:bold;font-family:'Microsoft Yahei';}
+.html{background:url(images/3617e4e0b765c9c3d97a1cf43d952e74.jpg) no-repeat;background-size:100%;}
+.h5{background:url(images/5735972bd40735fa79fe3fd49a510fb30f24087a.jpg) no-repeat;background-size:100%;}
+.js{background:url(images/ae4bd0160924ab180b18905a31fae6cd7b890b7a.jpg) no-repeat;background-size:100%;}
+.mobile{background:url(images/f509ab18972bd407abc9a2907f899e510fb3097a.jpg) no-repeat;background-size:100%;}
+.ajax{background:url(images/6b06d40735fae6cddbbada0c0bb30f2442a70f7a.jpg) no-repeat;background-size:100%;}
+.jsonp{background:url(images/282a35fae6cd7b893f624bee0b2442a7d9330e7a.jpg) no-repeat;background-size:100%;}
 
 
-.center_m { overflow:hidden; position:absolute; width:800px; height:400px;top:50%;left:50%;margin-left:-400px;margin-top:-200px; }
-.center_m_one { position:absolute; left:0; top:0;}
-.center_m_one li { float:left; width:800px; height:400px;}
-.center_m_one img { display:block; width:100%; height:100%;}
-.center_m span{position:absolute;width:35px;height:70px;top:50%;margin-top:-35px;cursor:pointer;}
-.prev{left:0;background:url(images/mod_focus_show.png) no-repeat 0 0;}
-.next{right:0;background:url(images/mod_focus_show.png) no-repeat -39px 0;}
-
-.center_btn{position:absolute;bottom:20px;left:50%;margin-left:-60px;}
-.center_btn li{border-radius:50%;width:20px;height:20px;background:#0FF;float:left;margin-left:15px;}
-
-.center_btn li.on{background:tomato;opacity:0.7;}
+.about{background:url(images/bbc9316ac32d0f16fccab610a7dbca50.jpg) no-repeat;background-size:100%;}
+.contact{background:url(images/e1ef582033b13606162aaec3bf24282a.jpg) no-repeat;background-size:100%;}
+.contact div{text-align:center;color:tomato;font-size:34px;font-family:'Microsoft Yahei';border-bottom:2px solid tomato;padding-bottom:10px;width:250px;margin:0 auto;text-shadow:2px 2px 4px #fff,-2px -2px 4px #fff;margin-top:170px;margin-bottom:20px;}
+.contact ul li{display:none;}
+.contact p{text-align:center;color:tomato;font-size:24px;font-family:'Microsoft Yahei';text-shadow:1px 1px 2px #fff,-1px -1px 2px #fff;padding-top:10px;}
+.contact ol{width:72px;margin:0 auto;margin-top:20px;}
+.contact ol li{width:10px;height:10px;float:left;margin:5px;border:2px solid #fff;border-radius:50%;}
+.contact .contact_show{display:block;}
+.active{background:#fff;}
+.about{text-align:center;}
+.about h2{font-family:'Raleway-Regular', 'Microsoft Yahei'; letter-spacing:5px;font-weight:300;color:#000;font-size:36px; text-transform:uppercase;text-align:center;margin-top:50px;padding-bottom:20px;}
+.about p{font-family:'Raleway-Regular', 'Microsoft Yahei'; letter-spacing:5px;font-weight:300;color:#000;font-size:36px; text-transform:uppercase;text-align:center;padding:20px 0;}
+.about a{display:inline-block;width:150px;height:50px;text-align:center;line-height:50px;color:#fff;font-weight:bold;background:#399;font-size:30px;margin-top:70px;}
+.about a:hover{text-shadow:2px 2px 4px tomato,-2px -2px 4px tomato;}
 </style>
 <script src="javascripts/tween.js"></script>
+<script src="javascripts/swiper.min.js"></script>
 <script>
     /*document.addEventListener("DOMContentLoaded", function() {
         var oHd = document.querySelector("header");
@@ -150,8 +174,19 @@
         })()
         }, false);*/
 		
-		
 window.onload=function(){
+	
+	(function (){
+		new Swiper('.swiper-container',{
+		pagination: '.swiper-pagination',
+		direction: 'vertical',
+		mousewheelControl: true,
+		paginationClickable :true,
+		//loop: true,
+		//effect : 'flip',
+		});	
+	})();
+	
 	(function (){
 		var oUl=document.querySelector('.header_date');
 		var aSpan=oUl.getElementsByTagName('span');
@@ -159,11 +194,13 @@ window.onload=function(){
 		var H=aLi[0].offsetHeight;
 		time();
 		setInterval(function(){
+			
 			time();
 		},1000)
 		function time()
 		{
 			var oDate=new Date();
+			
 			var hour=toDub(oDate.getHours());
 			var minute=toDub(oDate.getMinutes());
 			var second=toDub(oDate.getSeconds());
@@ -175,6 +212,7 @@ window.onload=function(){
 				//alert(str.charAt(i));
 				//move(aSpan[i],{backgroundPosition:-H*(str.charAt(i))},{duration:50})
 				//aSpan[i].style.top=-H*(str.charAt(i))+'px';
+				
 				move(aSpan[i],{top:-H*(str.charAt(i))},{duration:500})
 			}	
 		}
@@ -185,7 +223,7 @@ window.onload=function(){
 	})();
 	
 	(function (){
-		var oUl=document.getElementById('h_nav');
+			var oUl=document.getElementById('h_nav');
             var aLi=oUl.children;
             var oBox=aLi[aLi.length-1]; 
 
@@ -209,182 +247,219 @@ window.onload=function(){
 	})();
 	
 	(function (){
-		var oBox = document.getElementById('center_oBox');
-		var oUl = document.getElementById('center_move');
-		var aLi = oUl.children;
-		var oOl = document.getElementById('cnt_img_btn');
-		var aBtn = oOl.children;
-		var oPrev = oBox.getElementsByTagName('span')[0];
-		var oNext = oBox.getElementsByTagName('span')[1];
-		//为了做无缝滚动，所以必须复制一份内容
-		oUl.innerHTML+=oUl.innerHTML;
-		//设置UL的宽度
-		oUl.style.width = aLi.length*aLi[0].offsetWidth+'px';
-		//得到ul一般的宽度
-		var W = oUl.offsetWidth/2;
-		//当前是第几个
-		var iNow = 0;
-		
-		var left=0;
-		var timer=null;
-		
-		timer=setInterval(function (){
-			iNow++;
-			tab();	
-		},2000);
-		
-		oBox.onmouseover=function(){
-			clearInterval(timer);
-			oPrev.style.display='block';
-			oNext.style.display='block';
-		};
-		oBox.onmouseout=function(){
-			oPrev.style.display='none';
-			oNext.style.display='none';
-			clearInterval(timer);
-			timer=setInterval(function (){
-				iNow++;
-				tab();	
-			},2000);
-		};
-		
-		
-		for(var i=0;i<aBtn.length;i++){
-			(function(index){
-				aBtn[i].onmouseover=function(){
-					//如果当前显示的是最后一张，并且即将移入的是第一张，就切换下一张
-					//如果iNow%aBtn.length等于2，就是最后一张，如果iNow%aBtn.length==-1也是最后一张.如果index%aBtn.length==0，那就是移入第一张
-					if((iNow%aBtn.length==2||iNow%aBtn.length==-1)&&index%aBtn.length==0){
-						iNow++;
-					}
-					//如果当前显示的是第一张，并且即将移入的是最后一张，就切换上一张
-					//如果iNow%aBtn.length等于0那就是第一张，如果index%aBtn.length等于2那就是移入最后一张
-					if(iNow%aBtn.length==0&&index%aBtn.length==2){
-						iNow--;
-					}
-					//当前下标是38，移入下标是2的按钮，想到37
-					iNow = Math.floor(iNow/aBtn.length)*aBtn.length+index;
-					tab();
-				};
-			})(i);
-		}
-		function tab(){
-			for(var i=0;i<aBtn.length;i++){
-				aBtn[i].className='';
-			}
-			//为了让按钮正常显示的计算
-			if(iNow>0){
-				aBtn[iNow%aBtn.length].className='on';
-				//console.log(iNow%aBtn.length);
-			}else{
-				aBtn[(iNow%aBtn.length+aBtn.length)%aBtn.length].className='on';
-			}
-			move(oUl,-iNow*aLi[0].offsetWidth);
-			//oUl.style.left = -iNow*aLi[0].offsetWidth+'px';
-		}
-		oPrev.onclick=function(){
-			iNow--;
-			tab();
-		};
-		oNext.onclick=function(){
-			iNow++;
-			tab();
-		};
-		var left = 0;
-		function move(obj,iTarget){
-			var start = left;
-			var dis = iTarget-start;
-			var count = Math.floor(700/30);
-			var n = 0;
-			clearInterval(obj.timer);
-			obj.timer = setInterval(function(){
-				n++;
-				var a = 1-n/count;
-				left = start+dis*(1-Math.pow(a,3));
-				if(left<0){
-					obj.style.left = left%W+'px';
-				}else{
-					obj.style.left = (left%W-W)%W+'px';
+		var oUl=document.getElementById('center');
+		var aLi=oUl.getElementsByTagName('li');
+		for (var i=0; i<aLi.length; i++)
+		{
+			aLi[i].onmouseenter=function (ev){
+				var oSpan=this.children[0];
+				var oEvent=ev || event;
+				var n=getN(oEvent, this);
+				
+				switch (n)
+				{
+					case 0:// right
+						oSpan.style.left='250px';
+						oSpan.style.top='0px';
+						
+						move(oSpan, {left:0});
+						break;
+						
+					case 1:// bttom
+						oSpan.style.left='0';
+						oSpan.style.top='250px';
+						
+						move(oSpan, {top:0});
+						break;
+						
+					case 2:// left
+						oSpan.style.left='-250px';
+						oSpan.style.top='0';
+						
+						move(oSpan, {left:0});
+						break;
+						
+					case 3:// top
+						oSpan.style.left='0';
+						oSpan.style.top='-250px';
+						
+						move(oSpan, {top:0});
+						break;
 				}
-				if(n==count){
-					clearInterval(obj.timer);
+			};
+			
+			aLi[i].onmouseleave=function (ev){
+				var oSpan=this.children[0];
+				var oEvent=ev || event;
+				var n=getN(oEvent, this);
+				switch (n)
+				{
+					case 0:// right
+						move(oSpan, {left:250});
+						break;
+						
+					case 1:// bttom
+						move(oSpan, {top:250});
+						break;
+						
+					case 2:// left
+						move(oSpan, {left:-250});
+						break;
+						
+					case 3:// top
+						move(oSpan, {top:-250});
+						break;
 				}
-			},30);
+			};
+		}
+		
+		
+		function getN(ev, oDiv)
+		{
+			var y=oDiv.offsetHeight/2+oDiv.offsetTop-ev.clientY;
+			var x=oDiv.offsetWidth/2+oDiv.offsetLeft-ev.clientX;
+			
+			var a=Math.atan2(y, x)*180/Math.PI;
+			var n=Math.round((a+180)/90)%4;
+			
+			return n;
+		}	
+	})();
+	
+	(function (){
+		var oUl=document.getElementById('about');
+		var oOl=document.getElementById('about_ac');	
+		var aLi=oUl.getElementsByTagName('li');
+		var acLi=oOl.getElementsByTagName('li');
+		
+		for (var i=0;i<acLi.length;i++)
+		{
+			acLi[i].index=i;
+			acLi[i].onmouseover=function (){
+				for (var i=0;i<acLi.length;i++)
+				{
+					move(aLi[i], {opacity:0},{duration:2000});
+					aLi[i].className='';
+					acLi[i].className='';
+				}
+				this.className='active';
+				aLi[this.index].className='contact_show';
+				move(aLi[this.index], {opacity:1},{duration:2000});
+			};
 		}
 	})();
+	
 };
 </script>
 <body>
-    <div class="header animated bounceInDown">
-        <div class="header_top clearfix">
-            <div class="header_date">
-				<ul class="clearfix">
-					<li>
-						<span></span>
-					</li>
-					<li>
-						<span></span>
-					</li>
-					<li>:</li>
-					<li>
-						<span></span>
-					</li>
-					<li>
-						<span></span>
-					</li>
-					<li>:</li>
-					<li>
-						<span></span>
-					</li>
-					<li>
-						<span></span>
-					</li>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+		<div class="header animated bounceInDown swiper-slide" id="head">
+			<div class="header_top clearfix">
+				<div class="header_date">
+					<ul class="clearfix">
+						<li>
+							<span></span>
+						</li>
+						<li>
+							<span></span>
+						</li>
+						<li>:</li>
+						<li>
+							<span></span>
+						</li>
+						<li>
+							<span></span>
+						</li>
+						<li>:</li>
+						<li>
+							<span></span>
+						</li>
+						<li>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+				<ul class="header_nav" id="h_nav">
+					<li><a href="javascript:;">首页</a></li>
+					<li><a href="javascript:;">H5作品</a></li>
+					<li><a href="javascript:;">JS作品</a></li>
+					<li><a href="javascript:;">个人简介</a></li>
+					<li><a href="javascript:;">联系方式</a></li>
+					<li class="header_box"></li>
 				</ul>
-            </div>
-            <ul class="header_nav" id="h_nav">
-                <li><a href="javascript:;">首页</a></li>
-                <li><a href="javascript:;">H5作品</a></li>
-                <li><a href="javascript:;">JS作品</a></li>
-                <li><a href="javascript:;">个人简介</a></li>
-				<li><a href="javascript:;">联系方式</a></li>
-				<li class="header_box"></li>
-            </ul>
-        </div>
-		<div class="header_center">
-			<div class="h_btn_left">
-				<a href="javascript:;">个人信息</a>
-				<span class="d_btn_top"></span>
-				<span class="d_btn_right"></span>
-				<span class="d_btn_bottom"></span>
-				<span class="d_btn_left"></span>
 			</div>
-			<div class="h_center_img"></div>
-			<p class="header_title">web前端攻城狮</p>	
-			<div class="h_btn_right">
-				<a href="javascript:;">作品展示</a>
-				<span class="i_btn_top"></span>
-				<span class="i_btn_right"></span>
-				<span class="i_btn_bottom"></span>
-				<span class="i_btn_left"></span>
+			<div class="header_center">
+				<div class="h_btn_left">
+					<a href="javascript:;">个人信息</a>
+					<span class="d_btn_top"></span>
+					<span class="d_btn_right"></span>
+					<span class="d_btn_bottom"></span>
+					<span class="d_btn_left"></span>
+				</div>
+				<div class="h_center_img"></div>
+				<p class="header_title">web前端攻城狮</p>	
+				<div class="h_btn_right">
+					<a href="javascript:;">作品展示</a>
+					<span class="i_btn_top"></span>
+					<span class="i_btn_right"></span>
+					<span class="i_btn_bottom"></span>
+					<span class="i_btn_left"></span>
+				</div>
 			</div>
 		</div>
-    </div>
-	<div class="center">
-		<div class="center_m" id="center_oBox">
-			<ul class="center_m_one clearfix" id="center_move">
-				<li><a href="javascript:;"><img src="images/css.png" /></a></li>
-				<li><a href="javascript:;"><img src="images/js.jpg" /></a></li>
-				<li><a href="javascript:;"><img src="images/h5.png" /></a></li>
-			</ul>
-			<span class="prev"></span>
-			<span class="next"></span>
-			<ul class="center_btn" id="cnt_img_btn">
-				<li></li>
-				<li></li>
-				<li></li>
+		<div class="swiper-slide center">
+			<ul class="clearfix" id="center">
+				<li class="html"><a href="work.html" target="_blank">html/css</a></li>
+				<li class="js"><a href="javascript:;">javascript</a></li>
+				<li class="h5"><a href="javascript:;">H5/CSS3</a></li>
+				<li class="mobile"><a href="javascript:;">Mobile</a></li>
+				<li class="ajax"><a href="javascript:;">ajax</a></li>
+				<li class="jsonp"><a href="javascript:;">jsonp</a></li>
 			</ul>
 		</div>
 		
+		<div class="swiper-slide contact">
+			<div>ABOUT ME</div>
+			<ul id="about">
+				<li class="contact_show">
+					<p>熟练掌握HTML5、CSS3、JavaScript开发</p>
+					<p>熟悉W3C标准与ES规范，熟悉Web语义化</p>
+					<p>熟练掌握盒模型、常用布局以及浏览器和移动设备兼容性</p>
+					<p>有相关网站构建和调试经验，良好的责任心和学习能力，新知识理解快，乐于分享</p>
+					<p>热爱coding</p>
+				</li>
+				<li>
+					<p>能用原生js进行复杂页面的开发</p>
+					<p>熟练运用原生js编写ajax和jsonp函数，进行普通交互和跨域交互</p>
+					<p>同时熟悉jQuery快速开发PC端也面以及运用zepto开发移动端页面</p>
+					<p>思路清晰，思维灵活，能根据不同情况运用不同方法</p>
+					<p>熟悉Linux命令和SQL语句</p>
+				</li>
+				<li>
+					<p>熟悉面向对象思想，能运用面向对象进行开发</p>
+					<p>熟悉HTML5的canvas、svg，能够运用canvas和raphaeljs进行图标制作</p>
+					<p>同时熟悉jQuery快速开发PC端也面以及运用zepto开发移动端页面</p>
+					<p>了解MVC思想，了解angularjs的简单应用</p>
+					<p>熟悉C、Python、PHP、Nodejs，对后台也抱有浓厚兴趣</p>
+				</li>
+			</ul>
+			<ol class="clearfix" id="about_ac">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<div class="swiper-slide about">
+			<h2>Please contact me</h2>
+			<p>TEL: 18513054782</p>
+			<p>QQ: 765901494</p>
+			<p>EMAil: 18513054782@163.com</p>
+			<a href="javascript:;">下载简历</a>
+		</div>
 	</div>
+    <div class="swiper-pagination"></div>
+</div>
+
 </body>
 </html>

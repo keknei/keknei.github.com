@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{padding:0;margin:0;}
+ul{list-style:none;}
+.clearfix:after{display:block;content:'';clear:both;}
+.clearfix{zoom:1;}
+.header{height:37px;background:#000;border-top:3px solid #00925f;}
+.header_box{width:1180px;margin:0 auto;}
+.su{width:20px;height:17px;float:left;background:url(img/icons.png) no-repeat -265px -3px;margin-top:10px;}
+.wb{width:16px;height:18px;float:left;background:url(img/icons.png) no-repeat -317px -1px;margin-top:10px;margin-left:15px;}
+.phone{float:left;font-size:14px;color:#009256;margin-top:10px;margin-left:19px;font-weight:bold;}
+.header_r{float:right;margin-top:10px;}
+.header_r>li{float:left;line-height:16px;background:url(img/oppo.png) no-repeat right;}
+.header_r>li>a{font-size:12px;color:#b2b2b2;text-decoration:none;padding:0px 15px;}
+.header_r>li>i{width:19px;height:16px;background:url(img/oppo2.png) no-repeat;margin-left:15px;float:left;margin-top:3px;}
+.header_r>li>b{width:1px;height:27px;background:url(img/oppo1.png) no-repeat;float:right;}
+
+.header_r .header_r_last_r{float:left;margin-top:3px;}
+.nav{width:1180px;margin:0 auto;margin-top:32px;}
+.logo{float:left;width:169px;height:26px;background:url(img/icons.png) no-repeat 0px 0px;}
+.nav_list{float:right;margin-top:7px;}
+.nav_list>li{float:left;margin:0px 20px;}
+.nav_list>li>a{font-size:14px;color:#2b2b2b;text-decoration:none;font-weight:bold;}
+.main_pic{height:620px;margin-top:27px;border-bottom:1px solid #b2b2b2;position:relative;}
+.bjt_pic1{background:url(img/20150202100021_PPLCdk.jpg) no-repeat center;height:620px;position:relative;}
+.bjt_pic2{background:url(img/1.jpg) no-repeat center;height:620px;}
+.bjt_pic3{background:url(img/2.jpg) no-repeat center;height:620px;}
+.main_pic li{display:none;}
+.main_pic .show{display:block;}
+
+.main_pic>i{height:3px;background:#fff;opacity:0.5;filter:alpha(filter:50);position:absolute;top:0px;left:0px;width:100%;}
+.main_pic>b{height:70px;background:#fff;opacity:0.7;filter:alpha(filter:50);position:absolute;bottom:0px;left:0px;width:100%;}
+.main_pic a{background:url(img/b20150202100021_TgEOkp.png) no-repeat;position:absolute;bottom:0px;left:50%;margin-left:-590px;width:1180px;height:630px;}
+.Btn{position:relative;}
+.btn2{height:15px;position:absolute;bottom:50%;left:50%;margin-left:-30px;margin-bottom:-8px;}
+
+.button{background:url(img/icons.png) -258px -929px no-repeat;width:16px;height:15px;float:left;margin-right:13px;}
+
+.button1{background:url(img/icons.png) -279px -929px no-repeat;width:16px;height:15px;float:left;margin-right:13px;}
+
+
+.center_pic{width:288px;background:url(img/icons.png) 0px -707px no-repeat;height:80px;margin:0 auto;margin-top:52px;}
+
+.center{width:1180px;margin:0 auto;margin-top:42px;}
+.center_img{background:url(img/20140319154524jUOVBkgi1v.jpg) no-repeat;width:280px;height:420px;display:block;box-shadow:0px 12px 12px 0px #000;}
+.center_img:hover{transform:translate(0px,30px)}
+.center>ul{margin-left:-9px;overflow:hidden;}
+.center>ul>li{height:565px;width:280px;padding-right:10px;border-right:1px solid #eaeaea;float:left;margin-left:9px;}
+.center_b{border-bottom:5px solid #dfdfdf;width:280px;}
+.bt{font-size:18px;font-weight:bold;margin-top:43px;text-align:center;color:#000;height:18px;}
+.sm{font-size:12px;text-align:center;color:#b4b4b4;margin-top:14px;margin-bottom:14px;height:12px;}
+.money{float:left;font-size:12px;color:#00925f;font-family:'Microsoft Yahei';margin-left:85px;}
+.lj{float:left;font-size:12px;color:#00925f;text-decoration:none;margin-left:10px;}
+.gm{margin-bottom:27px;height:12px;}
+.gm_pic{background:url(img/icons.png) -177px -1013px no-repeat;width:14px;height:14px;float:left;margin-left:10px;}
+.center .center_r{border-right:none;width:270px;}
+.center_bjs{background:#f2f2f2;height:797px;}
+
+.main_pic2{width:288px;background:url(img/icons.png) 0px -707px no-repeat;height:80px;margin:0 auto;}
+.main_center{width:1180px;margin:0 auto;margin-top:45px;}
+.main_center_l_t_l{height:575px;float:left;width:280px;text-decoration:none;border-bottom:5px solid #dfdfdf;background:#fff;}
+.main_center_l_t_l_pic{margin-top:40px;margin-left:43px;}
+.main_center_l_t_l:hover{transform:scale(1.5);}
+.js{font-size:14px;color:#868686;text-align:center;margin-top:24px;}
+.title_1{font-size:20px;color:#5a5a5a;font-weight:bold;text-align:center;margin-top:10px;}
+.money1{font-family:'Microsoft Yahei';color:#008e59;font-size:12px;margin-top:12px;text-align:center;}
+.center2_bjs{background:#f6f6f6;height:1072px;padding-top:52px;}
+
+.main_center_l_t_r{float:left;margin-left:20px;width:270px;}
+.main_center_l_t_r_t{width:210px;height:270px;border:5px solid #eaeaea;padding:0px 30px;float:left;background:#fff;margin-bottom:20px;}
+.main_center_l_t_r_t ul{padding-left:10px;width:95px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;padding-top:16px;margin-top:24px;float:left;height:134px;}
+.main_center_l_t_r_t li{line-height:34px;}
+.main_center_l_t_r_t span{padding-left:25px;background:url(img/icons.png) -134px -355px no-repeat;width:18px;height:18px;}
+.main_center_l_t_r_t a{text-decoration:none;font-size:12px;color:#b2b2b2;}
+.gm1{margin-left:65px;margin-top:22px;}
+
+.main_center_l_t_r_b{float:left;background:#fff;text-decoration:none;width:280px;height:270px;border-bottom:5px solid #e1e1e1;}
+.main_center_l_t_r_b:hover{transform:scale(1.5);}
+
+.main_center_l_t_r_b_js{font-size:16px;color:#585858;text-align:center;}
+
+.main_center_l_b{width:580px;height:270px;background:#FFF;float:left;margin-top:20px;border-bottom:5px solid #e1e1e1;}
+.main_center_l_b_pic{float:left;}
+.main_center_l_b_b{float:left;margin-top:73px;}
+
+.main_center_r{float:right;}
+.main_center_l{float:left;}
+
+.main_center_r_b{width:580px;height:275px;background:#FFF;float:left;border-bottom:5px solid #e1e1e1;margin-bottom:20px;}
+
+.center3_bjs{background:#eaeaea;height:797px;border-top:1px solid #d9d9d9;}
+
+.main_center{width:1180px;margin:0 auto;margin-top:45px;}
+.main_pic2_l{float:left;width:800px;}
+.main_pic2_l_list{float:left}
+.main_pic2_l_list li{float:left;margin-right:20px;margin-bottom:20px;position:relative;}
+.main_pic2_l_list a{text-decoration:none;background:url(img/oppo7.png) no-repeat;float:left;width:;width:380px;height:270px;}
+.main_pic2_l_list a:hover{transform:rotate(30deg);}
+.main_pic2_l_list_h{font-size:24px;font-weight:bold;color:#000;text-align:center;margin-top:36px;}
+.main_pic2_l_list_p{font-size:18px;color:#4c534b;text-align:center;margin-top:12px;}
+.main_pic2_l_list i{width:380px;height:5px;background:#fff;opacity:0.5;filter:alpha(opacity:50);position:absolute;bottom:0px;left:0px;}
+.main_pic2_r{float:right;width:380px;height:560px;background:#fff;}
+.main_pic2_r .bnt{width:190px;height:48px;color:#a7a7a7;border:none 0;border-top:2px solid #00925f;font-size:18px;float:left;background:#fff;}
+
+.main_pic2_r input{width:190px;height:48px;color:#a7a7a7;border:none 0;background:#dadada;font-size:18px;float:left;outline:none;}
+
+.main_pic2_r ul{margin-top:45px;padding-left:30px;display:none;}
+.main_pic2_r .show{display:block;}
+.main_pic2_r li{background:url(img/oppo8.png) no-repeat left #dadada;height:72px;padding-left:116px;width:204px;padding-top:18px;margin-bottom:15px;}
+.main_pic2_r .main_pic2_r_pic{background:url(img/oppo9.png) no-repeat left #dadada;}
+.main_pic2_r a{font-size:12px;color:#838383;text-decoration:none;display:block;width:190px;line-height:18px;}
+
+.footer{width:1180px;height:125px;margin:0 auto;}
+.guild{height:240px;border-top:1px solid #eaeaea;background:#fff;}
+.guild_main{width:1180px;margin:0 auto;margin-top:30px;}
+.guild_main dl{float:left;width:188px;}
+.guild dt{font-size:14px;color:#373737;font-weight:bold;margin-bottom:14px;padding-left:3px;}
+.guild dd{line-height:28px;padding-left:9px;}
+.guild a{font-size:12px;color:#838383;text-decoration:none;}
+
+.guild_main_r dd{background:none;padding:0px;}
+.guild_main_r i{background:url(img/icons.png) 0px -854px no-repeat;width:20px;height:20px;float:left;margin-top:5px;margin-right:4px;}
+.guild_main_r a{float:left;}
+
+.guild_main_ladt dd{background:none;padding:0px;}
+.guild_main_ladt i{background:url(img/icons.png) -192px -861px no-repeat;width:38px;height:38px;float:left;margin-top:10px;margin-right:20px;}
+.guild_main_ladt .guild_main_ladt_b{background:url(img/icons.png) -256px -859px no-repeat;width:38px;height:38px;float:left;margin-top:10px;margin-right:20px;}
+.guild_main_ladt_phone{font-size:20px;color:#409f73;float:left;}
+.guild_main_ladt_phone_2{font-size:12px;color:#838383;float:left;}
+.guild_main_ladt_phone2{font-size:20px;color:#409f73;float:left;}
+.sj{background:url(img/icons.png) -210px -930px no-repeat;width:5px;height:8px;float:left;margin-top:8px;margin-left:25px;}
+
+.copyright{height:70px;background:#2b2b2b;border-top:5px solid #000000;}
+
+.copyright_main{width:1180px;margin:0 auto;}
+.logo2{float:left;background:url(img/icons.png) no-repeat 0px 0px;width:168px;height:25px;margin-top:23px;}
+.copyright_main p{font-size:12px;color:#828282;margin-left:18px;margin-top:27px;float:left;}
+.copyright_main ul{float:right;margin-top:23px;}
+.copyright_main li{float:left;margin-left:40px;}
+.copyright_main a{font-size:12px;color:#fff;text-decoration:none;}
+.footer ul{margin-top:50px;}
+.footer span{float:left;background:url(img/icons.png) -243px -587px no-repeat;width:42px;height:42px; border-radius:50%;}
+.footer span:hover{transform:rotate(90deg);}
+
+.footer li{float:left;width:236px;}
+.footer h3{font-size:18px;color:#363636;}
+.footer p{font-size:12px;color:#989898;margin-top:5px;}
+.footer div{margin-left:12px;float:left;}
+</style>
+
+<script>
+	window.onload=function(){
+			var oDiv=document.getElementById('main_images');
+			var oSpan=oDiv.getElementsByTagName('span');
+			var oLi=oDiv.getElementsByTagName('li');
+			
+			var oDiv2=document.getElementById('bigbox');
+			var oInput=oDiv2.getElementsByTagName('input');
+			var oUl=oDiv2.getElementsByTagName('ul')
+			
+			for (i=0;i<oInput.length;i++){
+				oInput[i].index=i
+				oInput[i].onclick=function(){
+					for (var i=0;i<oInput.length;i++){
+						oInput[i].className='';
+						oUl[i].className='';
+						}
+					this.className='bnt'
+					oUl[this.index].className='show';
+					}
+				}
+			
+			for (var i=0;i<oSpan.length;i++){
+				oSpan[i].index=i
+				
+				oSpan[i].onmouseover=function(){
+					for(i=0;i<oSpan.length;i++){
+						oSpan[i].className='button';
+						oLi[i].className='';
+						}
+					this.className='button1';
+					oLi[this.index].className='show';
+					}
+				
+				}
+		}
+
+</script>
+</head>
+
+<body>
+	<div class="header">
+        <div class="header_box clearfix">
+            <a href="#" class="su"></a>
+            <a href="#" class="wb"></a>
+            <p class="phone">40001-666-888</p>
+            <ul class="header_r">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">积分兑换</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li class="clearfix"><i></i><a href="#" class="header_r_last_r">购物车</a><b></b></li>
+            </ul>
+        </div>
+    </div>
+	<div class="nav clearfix">
+    	<a href="#" class="logo"></a>
+    	<ul class="nav_list">
+        	<li><a href="#">首页</a></li>
+            <li><a href="#">手机</a></li>
+            <li><a href="#">配件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">体验店</a></li>
+            <li><a href="#">软件商店</a></li>
+            <li><a href="#">软件商店</a></li>
+            <li><a href="#">商店</a></li>
+        </ul>
+    </div>
+	<div class="main_pic" id="main_images">
+    	<ul>
+        	<li class="show"><div class="bjt_pic1"><a href="#"></a></div></li>
+            <li><div class="bjt_pic2"></div></li>
+            <li><div class="bjt_pic3"></div></li>
+            <li><div class="bjt_pic2"></div></li>
+        </ul>	
+    	<i></i>
+        
+    	<b class="Btn">
+        	<i class="btn2">
+                <span class="button1"></span>
+                <span class="button"></span>
+                <span class="button"></span>
+                <span class="button"></span>
+            </i>
+        </b>
+    </div>
+    <div class="center_bjs">
+        <div class="center_pic"></div>
+        <div class="center">
+            <ul class="clearfix">
+                <li>
+                    <a href="#" class="center_img"></a>
+                    <div class="center_b">
+                        <h3 class="bt">R5</h3>
+                        <p class="sm">薄纸4.5mm</p>
+                        <div class="gm clearfix">
+                            <span class="money">￥2999</span>
+                            <a href="#" class="lj">立即购买</a>
+                            <i class="gm_pic"></i>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="center_img"></a>
+                    <div class="center_b">
+                        <h3 class="bt">R5</h3>
+                        <p class="sm">薄纸4.5mm</p>
+                        <div class="gm clearfix">
+                            <span class="money">￥2999</span>
+                            <a href="#" class="lj">立即购买</a>
+                            <i class="gm_pic"></i>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="center_img"></a>
+                    <div class="center_b">
+                        <h3 class="bt">R5</h3>
+                        <p class="sm">薄纸4.5mm</p>
+                        <div class="gm clearfix">
+                            <span class="money">￥2999</span>
+                            <a href="#" class="lj">立即购买</a>
+                            <i class="gm_pic"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="center_r">
+                    <a href="#" class="center_img"></a>
+                    <div class="center_b">
+                        <h3 class="bt">R5</h3>
+                        <p class="sm">薄纸4.5mm</p>
+                        <div class="gm clearfix">
+                            <span class="money">￥2999</span>
+                            <a href="#" class="lj">立即购买</a>
+                            <i class="gm_pic"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="center2_bjs">
+    	<div class="main_pic2"></div>
+    	<div class="main_center">
+        	<div class="main_center_l">
+            	<div class="main_center_l_t clearfix">
+                	<a href="#" class="main_center_l_t_l">
+                    	<img src="img/oppo4.png" class="main_center_l_t_l_pic" />
+                    	<p class="js">可触摸视窗 世界触手可及</p>
+                        <h3 class="title_1">可触摸视窗 世界触手可及</h3>
+                        <p class="money1">￥198.00</p>
+                    </a>
+                    <div class="main_center_l_t_r clearfix">
+                    	<div href="#" class="main_center_l_t_r_t">
+                        	<p class="js">OPPO手机官网ACCESSORY配件</p>
+                            <div class="clearfix">
+                                <ul>
+                                    <li><span></span><a href="#">耳机</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                </ul>
+                                <ul>
+                                    <li><span></span><a href="#">耳机</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                </ul>
+                            </div>
+                            <p class="gm1">
+                            	<a href="#" class="lj">立即购买</a>
+                            	<i class="gm_pic"></i>
+                            </p>
+                        </div>
+                        <a href="#" class="main_center_l_t_r_b">
+                        	<img src="img/oppo5.png" />
+                        	<p class="main_center_l_t_r_b_js">可触摸视窗 世界触手可及</p>
+                            <p class="money1">￥198.00</p>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="main_center_l_b">
+                	<img src="img/oppo6.png" class="main_center_l_b_pic" />
+                    <div class="main_center_l_b_b">
+                        <p class="js">可触摸视窗 世界触手可及</p>
+                        <h3 class="title_1">可触摸视窗 世界触手可及</h3>
+                        <p class="money1">￥198.00</p>
+                    </div>
+                </a>
+            </div>
+        	<div class="main_center_r">
+            	<a href="#" class="main_center_r_b">
+                	<img src="img/oppo6.png" class="main_center_l_b_pic" />
+                    <div class="main_center_l_b_b">
+                        <p class="js">可触摸视窗 世界触手可及</p>
+                        <h3 class="title_1">可触摸视窗 世界触手可及</h3>
+                        <p class="money1">￥198.00</p>
+                    </div>
+                </a>
+            	<div class="main_center_l_t clearfix">
+                	<a href="#" class="main_center_l_t_l">
+                    	<img src="img/oppo4.png" class="main_center_l_t_l_pic" />
+                    	<p class="js">可触摸视窗 世界触手可及</p>
+                        <h3 class="title_1">可触摸视窗 世界触手可及</h3>
+                        <p class="money1">￥198.00</p>
+                    </a>
+                    <div class="main_center_l_t_r clearfix">
+                    	<div href="#" class="main_center_l_t_r_t">
+                        	<p class="js">OPPO手机官网ACCESSORY配件</p>
+                            <div class="clearfix">
+                                <ul>
+                                    <li><span></span><a href="#">耳机</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                </ul>
+                                <ul>
+                                    <li><span></span><a href="#">耳机</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                    <li><span></span><a href="#">保护壳</a></li>
+                                </ul>
+                            </div>
+                            <p class="gm1">
+                            	<a href="#" class="lj">立即购买</a>
+                            	<i class="gm_pic"></i>
+                            </p>
+                        </div>
+                        <a href="#" class="main_center_l_t_r_b">
+                        	<img src="img/oppo5.png" />
+                        	<p class="main_center_l_t_r_b_js">可触摸视窗 世界触手可及</p>
+                            <p class="money1">￥198.00</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="center3_bjs">
+    	<div class="main_pic2"></div>
+    	<div class="main_center">
+        	<div class="main_pic2_l">
+            	<ul class="main_pic2_l_list">
+                	<li>
+                    	<a href="#">
+                        	<h3 class="main_pic2_l_list_h">货到付款</h3>
+                            <p class="main_pic2_l_list_p">支持现金+POS机刷卡支付</p>
+                        </a>
+                        <i></i>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<h3 class="main_pic2_l_list_h">货到付款</h3>
+                            <p class="main_pic2_l_list_p">支持现金+POS机刷卡支付</p>
+                        </a>
+                        <i></i>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<h3 class="main_pic2_l_list_h">货到付款</h3>
+                            <p class="main_pic2_l_list_p">支持现金+POS机刷卡支付</p>
+                        </a>
+                        <i></i>
+                    </li>
+                    <li>
+                    	<a href="#">
+                        	<h3 class="main_pic2_l_list_h">货到付款</h3>
+                            <p class="main_pic2_l_list_p">支持现金+POS机刷卡支付</p>
+                        </a>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+        	<div class="main_pic2_r" id="bigbox">
+            	<div class="clearfix">
+                	<input type="button" value="新闻" class="bnt">
+                    <input type="button" value="微博">
+                </div>
+            	<ul class="show">
+                	<li class="clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+				</ul>
+                <ul>
+                	<li class="main_pic2_r_pic clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="main_pic2_r_pic clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="main_pic2_r_pic clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+                    <li class="main_pic2_r_pic clearfix">
+                    	<a href="#">业界革命，OPPO发布全球最高灵敏度平面振膜耳机PM-1</a>
+                    </li>
+				</ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+    	<ul>
+        	<li class="clearfix">
+            	<span></span>
+            	<div>
+                	<h3>正品保障</h3>
+                	<p>所有产品都是原装正品</p>
+                </div>
+            </li>
+        	<li class="clearfix">
+            	<span></span>
+            	<div>
+                	<h3>正品保障</h3>
+                	<p>所有产品都是原装正品</p>
+                </div>
+            </li>
+            <li class="clearfix">
+            	<span></span>
+            	<div>
+                	<h3>正品保障</h3>
+                	<p>所有产品都是原装正品</p>
+                </div>
+            </li>
+            <li class="clearfix">
+            	<span></span>
+            	<div>
+                	<h3>正品保障</h3>
+                	<p>所有产品都是原装正品</p>
+                </div>
+            </li>
+            <li class="clearfix">
+            	<span></span>
+            	<div>
+                	<h3>正品保障</h3>
+                	<p>所有产品都是原装正品</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="guild">
+        <div class="guild_main">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+            </dl>
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+            </dl>
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+            </dl>
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+                <dd><a href="#">关于OPPO</a></dd>
+            </dl>
+            <dl class="guild_main_r">
+                <dt>关于我们</dt>
+                <dd class="clearfix"><i></i><a href="#">关于OPPO</a></dd>
+                <dd class="clearfix"><i></i><a href="#">关于OPPO</a></dd>
+                <dd class="clearfix"><i></i><a href="#">关于OPPO</a></dd>
+                <dd class="clearfix"><i></i><a href="#">关于OPPO</a></dd>
+            </dl>
+            <dl class="guild_main_ladt">
+                <dt>联系我们</dt>
+                <dd class="clearfix">
+                	<i></i>
+                    <p class="guild_main_ladt_phone">4001-666-888</p>
+                    <p class="guild_main_ladt_phone_2">7*24小时客服电话</p>
+                </dd>
+                <dd class="clearfix">
+                	<i class="guild_main_ladt_b"></i>
+                    
+                    <p class="guild_main_ladt_phone2">在线客服</p>
+                    <b class="sj"></b>
+                    <p class="guild_main_ladt_phone_2">7*24小时客服电话</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+    <div class="copyright">
+    	<div class="copyright_main">
+        	<a href="#" class="logo2"></a>
+            <p>@东完通讯科技有限公司34748 3正好（粤ICP呗49749她u4ut好）</p>
+            <ul>
+            	<li><a href="#">版权说明</a></li>
+                <li><a href="#">版权说明</a></li>
+                <li><a href="#">版权说明</a></li>
+                <li><a href="#">版权说明</a></li>
+                <li><a href="#">版权说明</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+ 

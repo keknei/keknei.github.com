@@ -1,0 +1,1036 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>无标题文档</title>
+<script src="js/jquery-1.7.2.js"></script>
+<link rel="stylesheet" href="css/base.css">
+<style>
+.header{background:url(img/bdl0.png) no-repeat;height:80px;padding-top:43px;}
+.header_main{width:1000px;margin:0 auto;}
+.header i{float:left;width:185px;height:44px;background:url(img/bdl1.gif) no-repeat;}
+.header_main ul{float:right;margin-top:12px;}
+.header_main li{float:left;font-size:16px;color:#e1e6f2;line-height:18px;margin-right:14px;}
+.header_main a{font-size:14px;color:#e1e6f2;}
+.login{border-right:2px solid #e1e6f2;}
+.login2{margin-right:14px;background:url(img/bdl12.png) no-repeat center bottom;padding-bottom:6px;}
+.header_main b{width:23px;height:21px;background:url(img/bdl1.png) no-repeat;display:block;}
+.header_main span{width:21px;height:18px;background:url(img/bdl2.png) no-repeat;display:block;}
+.inp{float:right;width:100px;height:32px;border:1px solid #cfcfcf;border-top:2px solid #cfcece;outline:none;background:url(img/bdl3.png) no-repeat #eeeded;font-size:14px;color:#818181;padding-left:44px;margin-top:2px;}
+.btn{float:right;margin-top:2px;background:url(img/bdl4.png) no-repeat;width:31px;height:35px;border:none 0;outline:none;}
+
+.nav{background:url(img/bdl13.png) no-repeat;height:42px;}
+.nav_main{width:1000px;margin:0 auto;}
+.nav_main_l{width:185px;height:42px;background:url(img/bdl5.png) no-repeat 177px 19px #343434;font-size:14px;color:#eeeeee;line-height:42px;padding-left:15px;float:left;position:relative;}
+.nav_main_l:hover .nav_main_l_position{display:block;}
+
+.nav_main_r{float:left;}
+.nav_main_r>li{float:left;font-size:14px;color:#f8f8f8;width:88px;height:42px;text-align:center;line-height:42px;position:relative;}
+.nav_main_r>li>a{font-size:14px;color:#f8f8f8;display:block;width:88px;height:42px;text-align:center;line-height:42px;}
+.nav_main_l_position{width:178px;height:506px;border:1px solid #e5e5e6;border-top:2px solid #e8e8e8;position:absolute;bottom:-512px;left:0px;padding-top:4px;padding-left:10px;padding-right:10px;display:none;background:#fff;}
+.nav_main_l_bt{font-size:14px;color:#323232;font-weight:bold;line-height:14px;margin-top:10px;margin-bottom:10px;}
+.nav_main_l_position_f{border-bottom:2px solid #dad9d9;height:100px;}
+.nav_main_l_position_f ul{float:left;}
+.nav_main_l_position_f li{line-height:23px;}
+.nav_main_l_position_f a{color:#666666;font-size:12px;}
+.nav_main_l_one,.nav_main_l_two,.nav_main_l_three{margin-right:23px;}
+..nav_main_l_position_f .nav_main_l_position_much{font-size:14px;color:#323232;display:block;margin-top:15px;}
+
+.nav_main_r div{width:88px;height:238px;display:none;position:absolute;left:0px;top:42px;background:#fff;}
+.nav_main_r_f ul{padding:0px 6px;}
+.nav_main_r_f li{height:38px;border-bottom:1px dotted #b0b1b2;}
+.nav_main_r_bjs{background:#4b4b4b;}
+.nav_main_r_f a{font-size:12px;color:#4b4b4b;}
+.nav_main_r_f .nav_main_r_f_last{border-bottom:none;}
+.nav_main_r .nav_main_r_f_show{display:block;}
+.pic{background:url(img/bdl6.png) no-repeat; height:512px;}
+.bt1{font-size:16px;color:#323232;margin:0 auto;padding-left:10px;margin-top:30px;margin-bottom:19px;font-weight:bold;width:990px;}
+.center{width:1000px;margin:0 auto;}
+.center_t_one{background:url(img/bdl7.png) no-repeat 30px 16px;width:141px;height:77px;}
+.center_t_two{background:url(img/bdl8.png) no-repeat 30px 16px;width:142px;height:77px;}
+.center_t_three{background:url(img/bdl15.png) no-repeat 30px 16px;width:141px;height:77px;}
+.center_t>ul{border-right:1px solid #e6e6e6;width:999px;}
+.center_t>ul>li{float:left;position:relative;border:1px solid #e6e6e6;border-bottom:2px solid #e6e6e6;border-right:none;}
+.center_t>ul>li>p{position:relative;z-index:2;}
+.center_t .center_t_border{border:1px solid #045dab;border-bottom:2px solid #045dab;margin-right:-1px;z-index:3;}
+
+.center_t i{background:url(img/bdl9.png) no-repeat; width:13px; height:5px;position:absolute;left:50%;bottom:-7px;margin-left:-7px;display:none;z-index:1;}
+.center_t .center_t_show{display:block;}
+
+.center_b ul{width:978px;height:265px;border:1px solid #e7e7e7;border-top:none;padding-left:20px;display:none;}
+.center_b .center_t_border_show{display:block;}
+.center_b li{float:left;}
+.center_t_border_one{margin-right:38px;}
+.car_bjt{background:url(img/bdl11.png) no-repeat;width:210px;height:144px;position:relative;z-index:-1;}
+.car_bt,.car_money1,.car_money3{font-size:12px;color:#323232;margin-top:12px;}
+.car_money1{margin-top:16px;}
+.car_money3{margin-top:6px;}
+.car_money2{font-size:12px;color:#c9c9c9;text-decoration:line-through;}
+.car_money4{font-size:12px;color:#e01e27;font-weight:bold;}
+
+.bt2{width:1000px;margin:0 auto;margin-top:20px;}
+.bt2 h3{font-size:18px;color:#323232;font-weight:bold;margin-left:18px;margin-bottom:12px;}
+.bt2 img{margin-left:2px;margin-bottom:12px;}
+
+.center_two{width:1000px;margin:0 auto;}
+.center_two li{width:211px;height:383px;border:1px solid #ebebeb;padding:15px;float:left;}
+.center_two h3{font-size:12px;color:#434343;padding-top:18px;font-weight:bold;border-bottom:2px solid #bfbebe;height:18px;}
+.center_two p{margin-bottom:13px;color:#888888;}
+.js1{margin-top:16px;}
+.center_two span{font-size:14px;color:#f28e51;}
+.center_two a{background:url(img/bdl17.png) no-repeat;width:82px;height:22px;display:inline-block;color:#fffaf7;font-size:14px;padding-top:5px;padding-left:8px;}
+.center_two i{background:url(img/bdl18.png) no-repeat;width:19px;height:19px;display:inline-block;float:right;}
+.center_two_margin{margin-right:9px;}
+.pic1{background:url(img/bdl20.png) no-repeat;height:95px;margin:0 auto;width:1000px;margin-top:14px;}
+.bt3{width:1000px;margin:0 auto;margin-bottom:11px;}
+.bt3 h3{font-size:18px;color:#323232;font-weight:bold;margin-top:20px;margin-left:17px;margin-bottom:12px;}
+
+.certer_three{width:1000px;margin:0 auto;}
+.certer_three_l{float:left;}
+.certer_three_c{width:525px;height:387px;border:1px solid #e7e7e6;float:left;}
+.certer_three_c_one{width:126px;height:385px;border:1px solid #e7e7e6;float:left;border-left:none 0;padding:0px 14px;}
+.certer_three_c_one{float:left}
+.certer_three_c_one a{background:url(img/bdl22.png) no-repeat 15px 12px;width:126px;height:86px;display:block;border-bottom:2px solid #e6e6e6;}
+.certer_three_c_one  .certer_three_c_one_last{border-bottom:none;height:121px;position:relative;}
+.certer_three_c_one_last_one{position:absolute;bottom:20px;left:50px;background:url(img/bdl23.png) no-repeat;width:6px;height:7px;}
+.certer_three_c_one_last_two{position:absolute;bottom:20px;left:61px;background:url(img/bdl24.png) no-repeat;width:6px;height:7px;}
+.certer_three_c_one_last_three{position:absolute;bottom:20px;left:72px;background:url(img/bdl24.png) no-repeat;width:6px;height:7px;}
+.certer_three_c_two{float:left;}
+.certer_three_c_two a{width:184px;height:193px;border-bottom:1px solid #e7e7e6;border-right:1px solid #e7e7e6;background:url(img/bdl25.png) no-repeat;display:block;}
+
+.certer_three_c_two .certer_three_c_two_border{border-bottom:none 0;}
+
+.certer_three_c_three{float:left;}
+.certer_three_c_three a{width:184px;height:193px;border-bottom:1px solid #e7e7e6;background:url(img/bdl25.png) no-repeat;display:block;}
+
+.certer_three_r{float:left;margin-left:20px;}
+.certer_three_r_t{margin-top:10px;margin-bottom:2px;}
+.certer_three_r_t h3{float:left;font-size:14px;color:#565353;}
+.certer_three_r_t a{float:right;color:#757172;}
+.certer_three_r_b li{line-height:40px;height:40px;border-bottom:1px dashed #cacaca;width:203px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.certer_three_r_b a{color:#909090;}
+.certer_three_r img{margin-top:14px;}
+
+.bt4{width:1000px;margin:0 auto;margin-top:24px;}
+.bt4_main{margin-bottom:10px;}
+.bt4_main h3{font-size:18px;color:#323232;float:left;margin-left:16px;}
+.bt4_main a{font-size:12px;color:#777777;float:right;margin-right:19px;}
+.center_fo{width:1000px;margin:0 auto;}
+.center_fo_t{border-left:1px solid #ededed;}
+.center_fo_t li{width:248px;height:246px;border-right:1px solid #ededed;float:left;}
+.center_fo_t_ling{background:url(img/bdl28.png) no-repeat 24px 0px;height:140px;}
+.center_fo_t_one{color:#6b6b6b;margin-left:32px;margin-top:5px;}
+.center_fo_t_two{color:#afaeae;margin-left:32px;margin-top:15px;margin-bottom:13px;}
+.center_fo_t_two span{color:#c31f25;font-weight:bold;}
+.center_fo_t_inp{width:114px;height:39px;background:url(img/bdl29.png) no-repeat;border:none;outline:none;color:#fef4f4;font-size:16px;margin-left:30px;}
+.center_fo_b li{float:left;}
+.center_fa{width:1000px;margin:0 auto;}
+.center_fa_one,.center_fa_two,.center_fa_three,.center_fa_fo{float:left;}
+.center_fa_one{width:248px;height:400px;border-right:1px solid #eeeeee;}
+.center_fa_one_t{margin-top:20px;margin-left:11px;margin-right:13px;}
+.center_fa_one_t h3{float:left;font-size:14px;color:#787777;}
+.center_fa_one_t a{float:right;font-size:14px;color:#787777;}
+.center_fa_one img{margin-top:14px;margin-left:14px;}
+.center_fa_one_b{margin-left:15px;width:208px;}
+.center_fa_one_b li{height:42px;line-height:41px;border-bottom:2px solid #ededed;}
+.center_fa_one_b a{font-size:12px;color:#909090;margin-left:8px;}
+
+.center_fa_two{width:238px;height:400px;border-right:1px solid #eeeeee;padding-left:15px;}
+.center_fa_two_t{margin-top:20px;margin-left:2px;margin-right:12px;}
+.center_fa_two_t h3{float:left;font-size:14px;color:#787777;}
+.center_fa_two_t a{float:right;font-size:14px;color:#787777;}
+
+.center_fa_two_b{margin-top:17px;margin-right:-21px;overflow:hidden;}
+.center_fa_two_b li{float:left;margin-right:21px;margin-bottom:21px;}
+.center_fa_two_b a{width:60px;height:61px;background:url(img/bdl32.png) no-repeat;display:block;}
+.center_fa_two_b p{color:#909090;margin-top:8px;margin-left:6px;}
+
+.center_fa_dl dt{font-size:14px;color:#787777;font-weight:bold;margin-bottom:8px;}
+.center_fa_dl dd{font-size:12px;color:#90908f;line-height:29px;}
+
+.center_fa_three{width:244px;height:392px;padding-left:8px;padding-top:8px;}
+.center_fa_three_t li{float:left;margin-right:7px;margin-bottom:8px;}
+.center_fa_three_t a{width:115px;height:91px;background:url(img/bdl33.png) no-repeat;display:block;}
+.center_fa_three_b{margin-top:15px;}
+.center_fa_three_b dt{font-size:14px;color:#909090;font-weight:bold;margin-bottom:4px;}
+.center_fa_three_b dd{font-size:12px;color:#909090;line-height:38px;border-bottom:2px solid #ededed;width:228px;}
+
+.title{width:984px;margin:0 auto;height:47px;border-bottom:1px dashed #dbdbdb;padding-left:16px;line-height:47px;font-size:18px;font-weight:bold;color:#131313;}
+
+.center_six{width:1000px;margin:0 auto;border-top:1px dashed #dbdbdb;margin-top:2px;}
+.center_six_l{width:248px;height:313px;border-right:1px solid #ededed;float:left;}
+.center_six_l_t{margin-left:10px;margin-right:14px;width:224px;border-bottom:1px solid #ededed;height:42px;}
+.center_six_l_t h3{font-size:14px;font-weight:bold;color:#969695;float:left;margin-left:12px;margin-top:18px;}
+.center_six_l_t a{font-size:12px;color:#969695;float:right;margin-right:8px;margin-top:21px;}
+.center_six_l img{margin-left:12px;margin-top:14px;}
+.center_six_l_b{margin-left:12px;width:221px;}
+.center_six_l_b li{border-bottom:1px dashed #dbdbdb;line-height:40px;height:40px;}
+.center_six_l_b a{margin-left:5px;color:#969695;}
+
+.center_six_c{width:404px;height:313px;border-right:1px solid #ededed;float:left;}
+.center_six_c_t{margin-left:11px;margin-right:10px;width:383px;border-bottom:2px solid #ededed;height:42px;}
+.center_six_c_t h3{font-size:14px;font-weight:bold;color:#969695;float:left;margin-left:12px;margin-top:18px;}
+.center_six_c_t a{font-size:12px;color:#969695;float:right;margin-right:8px;margin-top:21px;}
+.center_six_c img{margin-left:12px;margin-top:14px;}
+.center_six_c_b_main{margin-right:-22px;overflow:hidden;}
+.center_six_c_b{margin-left:12px;width:173px;float:left;margin-right:22px;}
+.center_six_c_b li{border-bottom:1px dashed #dbdbdb;line-height:40px;height:40px;}
+.center_six_c_b a{margin-left:5px;color:#969695;}
+
+.center_six_r{float:left;}
+.center_six_r_t{margin-left:10px;margin-right:4px;width:332px;border-bottom:2px solid #ededed;height:42px;}
+.center_six_r_t h3{font-size:14px;font-weight:bold;color:#969695;float:left;margin-left:12px;margin-top:18px;}
+.center_six_r_t a{font-size:12px;color:#969695;float:right;margin-right:8px;margin-top:21px;}
+.center_six_r_b{margin-top:14px;margin-left:12px;}
+.center_six_r_b img{float:left;}
+.center_six_r_b_b{margin-left:15px;width:191px;}
+.center_six_r_b_b li{border-bottom:1px dashed #dbdbdb;line-height:40px;height:40px;}
+.center_six_r_b_b a{margin-left:5px;color:#969695;}
+.center_six_r_b_main {float:left;}
+.center_six_r_b_main i{display:block;background:url(img/bdl38.png) no-repeat;width:104px;height:46px;margin-top:23px;margin-left:12px;padding-left:53px;line-height:46px;color:#4f3928;font-size:18px;font-weight:bold;}
+
+.center_serven{width:1000px;margin:0 auto;border-top:1px dashed #dbdbdb;margin-top:2px;padding-top:18px;}
+.center_serven h3{margin-top:12px;margin-left:17px;font-size:14px;color:#959594;}
+.center_serven_margin{margin-right:-10px;overflow:hidden;float:left;}
+.center_serven_main{height:287px;border-right:1px solid #ededed;width:255px;float:left;margin-right:10px;}
+.center_server_pic{margin-top:16px;margin-left:17px;position:relative;display:inline-block;}
+.center_server_pic img{vertical-align:middle;}
+.opabox{position:absolute;bottom:0px;left:0px;width:100%;}
+.opa{position:absolute;width:100%;background:#000;opacity:0.5;filter:alpha(opacity:50%);height:100%;}
+.name{position:relative;color:#ffffff;font-size:14px;padding-top:10px;padding-bottom:7px;padding-left:15px;}
+.center_server_b{margin-left:17px;margin-top:10px;}
+.center_server_b li{height:27px;line-height:27px;background:url(img/bdl41.png) no-repeat center left;padding-left:10px;}
+.center_server_b a{color:#a2a1a1;font-size:14px;}
+
+.center_serven_r{float:left;}
+.center_server_r_line{height:232px;border-left:1px dotted #e2e2e2;margin-left:20px;margin-top:20px;position:relative;}
+.center_server_r_line i{font-size:28px;color:#c6c6c5;}
+.center_server_r_line .one{position:absolute;top:0px;left:-7px;}
+.center_server_r_line .two{position:absolute;top:58px;left:-7px;}
+.center_server_r_line .three{position:absolute;top:115px;left:-7px;}
+.center_server_r_line .fo{position:absolute;top:174px;left:-7px;}
+
+.center_serven_r_ul{margin-left:9px;padding-top:14px;}
+.center_serven_r_ul li{height:58px;}
+.center_serven_r_jt{color:#989898;background:url(img/bdl43.png) no-repeat;width:82px;height:17px;padding-left:12px;line-height:17px;}
+.center_serven_r_bt{font-size:14px;color:#444444;margin-top:8px;margin-left:10px;}
+.footer{height:210px;background:url(img/bdl40.png) no-repeat;margin-top:20px;}
+.footer_t{padding-top:67px;font-size:14px;color:#fff;width:441px;margin:0 auto;}
+.footer_t a{font-size:14px;color:#fff;}
+.footer_b{font-size:12px;color:#fff;text-align:center;margin-top:30px;}
+</style>
+<script>
+	window.onload=function(){
+		var oUl=document.getElementById('box')
+		var oLi=oUl.children;
+		var oDiv=oUl.getElementsByTagName('div')
+		
+		for(var i=0;i<oLi.length;i++){
+			oLi[i].index=i
+			
+			oLi[i].onmouseover=function(){
+				for(var i=0;i<oLi.length;i++){
+					
+				oLi[i].className='';
+				oDiv[i].className='';
+				}
+				this.className='nav_main_r_bjs';
+				oDiv[this.index].className='nav_main_r_f_show';
+				}
+			oLi[i].onmouseout=function(){
+				
+				this.className='';
+				oDiv[this.index].className='';
+				}
+			}
+			
+		var oBox=document.getElementById('center_box')
+		var oBox_b=document.getElementById('center_b_box')
+		var oLi_two=oBox.children
+		var oI=oBox.getElementsByTagName('i')
+		var oUl_two=oBox_b.getElementsByTagName('ul')
+		for(var i=0;i<oLi_two.length;i++){
+			oLi_two[i].index=i;
+			oLi_two[i].onmouseover=function(){
+				for(var i=0;i<oLi_two.length;i++){
+					oLi_two[i].className='';
+					oI[i].className='';
+					oUl_two[i].className='clearfix';
+					}
+				this.className='center_t_border';
+				oI[this.index].className='center_t_show';
+				oUl_two[this.index].className='center_t_border_show'+' clearfix';
+				}
+			
+			}
+		}
+
+
+</script>
+</head>
+
+<body>
+	<div class="header">
+    	<div class="header_main clearfix">
+            <i></i>
+            <input type="button" class="btn" />
+            <input type="text" placeholder="去购物车结算" class="inp" />
+            <ul>
+                <li class="login"><a href="#" class="login2">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">[会员中心]</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"><b></b></a></li>
+                <li><a href="#"><span></span></a></li>
+            </ul>
+    	</div>
+    </div>
+	<div class="nav">
+    	<div class="nav_main clearfix">
+        	<div class="nav_main_l">产品分类
+            	<div class="nav_main_l_position">
+                	<div class="nav_main_l_position_f clearfix">
+                        <h3 class="nav_main_l_bt">生活精品</h3>
+                        <ul class="nav_main_l_one">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_two">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_three">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav_main_l_position_f clearfix">
+                        <h3 class="nav_main_l_bt">生活精品</h3>
+                        <ul class="nav_main_l_one">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_two">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_three">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav_main_l_position_f clearfix">
+                        <h3 class="nav_main_l_bt">生活精品</h3>
+                        <ul class="nav_main_l_one">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_two">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_three">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav_main_l_position_f clearfix">
+                        <h3 class="nav_main_l_bt">生活精品</h3>
+                        <ul class="nav_main_l_one">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_two">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul class="nav_main_l_three">
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">大众</a></li>
+                            <li><a href="#">现代</a></li>
+                            <li><a href="#">基尼</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="nav_main_l_position_much">更多&gt;&gt;</a>
+                </div>
+            </div>
+        	<ul class="nav_main_r" id="box">
+            	<li><a href="#">首页</a><div></div></li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>精品商城
+                	<div>
+                    	<ul class="nav_main_r_f">
+                        	<li><a href="#">奢侈精品</a></li>
+                        	<li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li><a href="#">奢侈精品</a></li>
+                            <li class="nav_main_r_f_last"><a href="#">奢侈精品</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+	<div class="pic"></div>
+	<h3 class="bt1">新车品牌专区</h3>
+    <div class="center">
+    	<div class="center_t">
+        	<ul class="clearfix" id="center_box">
+            	<li class="center_t_border"><p class="center_t_one"></p><i class="center_t_show"></i></li>
+                <li><p class="center_t_two"></p><i></i></li>
+                <li><p class="center_t_two"></p><i></i></li>
+                <li><p class="center_t_two"></p><i></i></li>
+                <li><p class="center_t_one"></p><i></i></li>
+                <li><p class="center_t_two"></p><i></i></li>
+                <li><p class="center_t_three"></p><i></i></li>
+            </ul>
+        </div>
+    	<div class="center_b" id="center_b_box">
+        	<ul class="center_t_border_show clearfix">
+               <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+               <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+               <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+               <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+            </ul>
+        	<ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">蒙娜丽莎 的微笑您已修改代码</p>
+                            <p class="car_money1">原价：<span class="car_money2">1990000万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">蒙娜丽莎 的微笑您已修改代码</p>
+                            <p class="car_money1">原价：<span class="car_money2">1990000万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">蒙娜丽莎 的微笑您已修改代码</p>
+                            <p class="car_money1">原价：<span class="car_money2">1990000万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+            <ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+            <ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+            <ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+            <ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+            <ul class="clearfix">
+                    	<li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li class="center_t_border_one">
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                        <li>
+                        	<p class="car_bjt"></p>
+                            <p class="car_bt">极致优雅 新OC演绎摩登生活秀</p>
+                            <p class="car_money1">原价：<span class="car_money2">199万元</span></p>
+                            <p class="car_money3">现价：<span class="car_money4">99万元</span></p>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+    <div class="bt2">
+    	<h3>精品商城</h3>
+    	<img src="img/bdl19.png">
+    </div>
+	<div class="center_two">
+    	<ul class="clearfix">
+        	<li class="center_two_margin">
+            	<img src="img/bdl16.png" />
+            	<h3>SLK 200 豪华运动型</h3>
+                <p class="js1">平均油耗率(L/100km)</p>
+                <p class="js2">加速时间0-100km/h(s):7</p>
+                <p class="js3">最高车速(km/h):237</p>
+                <p class="js4">轴距(mm):2430</p>
+                <span>价格：200-300万</span>
+                <a href="#" class="clearfix">立即购买<i></i></a>
+            </li>
+            <li class="center_two_margin">
+            	<img src="img/bdl16.png" />
+            	<h3>SLK 200 豪华运动型</h3>
+                <p class="js1">平均油耗率(L/100km)</p>
+                <p class="js2">加速时间0-100km/h(s):7</p>
+                <p class="js3">最高车速(km/h):237</p>
+                <p class="js4">轴距(mm):2430</p>
+                <span>价格：200-300万</span>
+                <a href="#" class="clearfix">立即购买<i></i></a>
+            </li>
+            <li class="center_two_margin">
+            	<img src="img/bdl16.png" />
+            	<h3>SLK 200 豪华运动型</h3>
+                <p class="js1">平均油耗率(L/100km)</p>
+                <p class="js2">加速时间0-100km/h(s):7</p>
+                <p class="js3">最高车速(km/h):237</p>
+                <p class="js4">轴距(mm):2430</p>
+                <span>价格：200-300万</span>
+                <a href="#" class="clearfix">立即购买<i></i></a>
+            </li>
+            <li>
+            	<img src="img/bdl16.png" />
+            	<h3>SLK 200 豪华运动型</h3>
+                <p class="js1">平均油耗率(L/100km)</p>
+                <p class="js2">加速时间0-100km/h(s):7</p>
+                <p class="js3">最高车速(km/h):237</p>
+                <p class="js4">轴距(mm):2430</p>
+                <span>价格：200-300万</span>
+                <a href="#" class="clearfix">立即购买<i></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="pic1"></div>
+    <div class="bt3">
+    	<h3>精品推荐</h3>
+        <img src="img/bdl27.png">
+    </div>
+    <div class="certer_three clearfix">
+    	<a href="#" class="certer_three_l"><img src="img/bdl21.png" /></a>
+    	<div class="certer_three_c">
+        	<ul class="certer_three_c_one">
+            	<li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href="#" class="certer_three_c_one_last">
+                    	<i class="certer_three_c_one_last_one"></i>
+                        <i class="certer_three_c_one_last_two"></i>
+                        <i class="certer_three_c_one_last_three"></i>
+                    </a>
+                </li>
+            </ul>
+        	<ul class="certer_three_c_two">
+            	<li><a href="#"></a></li>
+                <li class="certer_three_c_two_border"><a href="#"></a></li>
+            </ul>
+            <ul class="certer_three_c_three">
+            	<li><a href="#"></a></li>
+                <li class="certer_three_c_two_border"><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="certer_three_r">
+        	<div class="certer_three_r_t clearfix">
+            	<h3>新闻动态</h3>
+                <a href="#">更多 &gt;&gt;</a>
+            </div>
+        	<ul class="certer_three_r_b">
+            	<li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+                <li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+                <li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+                <li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+                <li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+                <li><a href="#">一汽奥迪博士亲临百得利海淀一汽奥迪博士亲临百得利海淀</a></li>
+            </ul>
+            <img src="img/bdl26.png" />
+        </div>
+    </div>
+    <div class="bt4">
+    	<div class="bt4_main clearfix">
+        	<h3>精品推荐</h3>
+            <a href="#">更多</a>
+        </div>
+        <img src="img/bdl27.png">
+    </div>
+    <div class="center_fo">
+    	<ul class="center_fo_t clearfix">
+        	<li>
+            	<p class="center_fo_t_ling"></p>
+            	<p class="center_fo_t_one">大众新款速腾</p>
+                <p class="center_fo_t_two">兑换积分：<span>1980分</span></p>
+                <input type="button" value="开始兑换" class="center_fo_t_inp">
+            </li>
+            <li>
+            	<p class="center_fo_t_ling"></p>
+            	<p class="center_fo_t_one">大众新款速腾</p>
+                <p class="center_fo_t_two">兑换积分：<span>1980分</span></p>
+                <input type="button" value="开始兑换" class="center_fo_t_inp">
+            </li>
+            <li>
+            	<p class="center_fo_t_ling"></p>
+            	<p class="center_fo_t_one">大众新款速腾</p>
+                <p class="center_fo_t_two">兑换积分：<span>1980分</span></p>
+                <input type="button" value="开始兑换" class="center_fo_t_inp">
+            </li>
+            <li>
+            	<p class="center_fo_t_ling"></p>
+            	<p class="center_fo_t_one">大众新款速腾</p>
+                <p class="center_fo_t_two">兑换积分：<span>1980分</span></p>
+                <input type="button" value="开始兑换" class="center_fo_t_inp">
+            </li>
+        </ul>
+        <ul class="center_fo_b clearfix">
+        	<li><img src="img/bdl30.png" /></li>
+            <li><img src="img/bdl30.png" /></li>
+            <li><img src="img/bdl30.png" /></li>
+            <li><img src="img/bdl30.png" /></li>
+        </ul>
+    </div>
+    <div class="bt4">
+    	<div class="bt4_main clearfix">
+        	<h3>精品推荐</h3>
+            <a href="#">更多</a>
+        </div>
+        <img src="img/bdl27.png">
+    </div>
+    <div class="center_fa clearfix">
+    	<div class="center_fa_one">
+        	<div class="center_fa_one_t clearfix">
+            	<h3>企业信息 &gt;&gt;</h3>
+                <a href="#">Moro&gt;&gt;</a>
+            </div>
+        	<img src="img/bdl31.png" />
+            <ul class="center_fa_one_b">
+            	<li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+                <li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+                <li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+                <li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+                <li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+                <li><a href="#">&gt;&gt; 全新保时捷Macan发布会</a></li>
+            </ul>
+        </div>
+    	<div class="center_fa_two clearfix">
+        	<div class="center_fa_two_t clearfix">
+            	<h3>企业信息&gt;&gt;</h3>
+                <a href="#">Moro&gt;&gt;</a>
+            </div>
+        	<ul class="center_fa_two_b clearfix">
+            	<li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+                <li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+                <li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+                <li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+                <li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+                <li>
+                	<a href="#"></a>
+                    <p>车型对比</p>
+                </li>
+            </ul>
+            <dl class="center_fa_dl">
+            	<dt>问答专家团 &gt;&gt;</dt>
+            	<dd>想做一个底盘装甲请问有必要吗？</dd>
+                <dd>想做一个底盘装甲请问有必要吗？</dd>
+                <dd>想做一个底盘装甲请问有必要吗？</dd>
+                <dd>想做一个底盘装甲请问有必要吗？</dd>
+            </dl>
+        </div>
+        <div class="center_fa_three">
+        	<ul class="center_fa_three_t clearfix">
+            	<li><a href="#"></a></li>
+            	<li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        	<dl class="center_fa_three_b">
+            	<dt>促销信息 &gt;&gt;</dt>
+            	<dd>&gt;&gt; 全新保时捷Macan发布会</dd>
+                <dd>&gt;&gt; 全新保时捷Macan发布会</dd>
+                <dd>&gt;&gt; 全新保时捷Macan发布会</dd>
+                <dd>&gt;&gt; 全新保时捷Macan发布会</dd>
+            </dl>
+        </div>
+        <div class="center_fa_fo"><img src="img/bdl34.png" /></div>
+    </div>
+    <div class="pic1"></div>
+    <h3 class="title">服务行业</h3>
+    <div class="center_six clearfix">
+    	<div class="center_six_l">
+        	<div class="center_six_l_t clearfix">
+            	<h3>服务套餐</h3>
+            	<a href="#">更多&gt;&gt;</a>
+            </div>
+        	<img src="img/bdl35.png" />
+            <ul class="center_six_l_b">
+            	<li><a href="#">美容卡</a></li>
+                <li><a href="#">美容卡</a></li>
+                <li><a href="#">美容卡</a></li>
+            </ul>
+        </div>
+    	<div class="center_six_c">
+        	<div class="center_six_c_t clearfix">
+            	<h3>服务套餐</h3>
+            	<a href="#">更多&gt;&gt;</a>
+            </div>
+        	<img src="img/bdl36.png" />
+            <div class="center_six_c_b_main clearfix">
+                <ul class="center_six_c_b">
+                    <li><a href="#">车险</a></li>
+                    <li><a href="#">家庭财产险</a></li>
+                    <li><a href="#">其他保险</a></li>
+                </ul>
+                <ul class="center_six_c_b">
+                    <li><a href="#">车险</a></li>
+                    <li><a href="#">家庭财产险</a></li>
+                    <li><a href="#">其他保险</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="center_six_r">
+        	<div class="center_six_r_t clearfix">
+            	<h3>服务套餐</h3>
+            	<a href="#">更多&gt;&gt;</a>
+            </div>
+        	<div class="center_six_r_b clearfix">
+            	<img src="img/bdl37.png" />
+                <div class="center_six_r_b_main">
+                    <ul class="center_six_r_b_b">
+                        <li><a href="#">预约试驾</a></li>
+                        <li><a href="#">预约保养</a></li>
+                        <li><a href="#">预约维修</a></li>
+                        <li><a href="#">预约租车</a></li>
+                    </ul>
+                    <i>400-800-266</i>
+                </div>
+            </div>
+        </div>
+    </div>	
+    <h3 class="title">服务行业</h3>
+    <div class="center_serven clearfix">
+    	<ul class="center_serven_margin clearfix">
+        	<li class="center_serven_main">
+            	<h3>二手车</h3>
+                <div class="center_server_pic">
+                    <img src="img/bdl39.png" />
+                    <div class="opabox">
+                        <p class="opa"></p>
+                        <p class="name">二手车本地过户流程</p>
+                    </div>
+                </div>
+                <ul class="center_server_b">
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                    <li><a href="#">二手车迁入与迁出限制条款</a></li>
+                </ul>
+            </li>
+            <li class="center_serven_main">
+            	<h3>二手车</h3>
+                <div class="center_server_pic">
+                    <img src="img/bdl39.png" />
+                    <div class="opabox">
+                        <p class="opa"></p>
+                        <p class="name">二手车本地过户流程</p>
+                    </div>
+                </div>
+                <ul class="center_server_b">
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                    <li><a href="#">二手车迁入与迁出限制条款</a></li>
+                </ul>
+            </li>
+            <li class="center_serven_main">
+            	<h3>二手车</h3>
+                <div class="center_server_pic">
+                    <img src="img/bdl39.png" />
+                    <div class="opabox">
+                        <p class="opa"></p>
+                        <p class="name">二手车本地过户流程</p>
+                    </div>
+                </div>
+                <ul class="center_server_b">
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                	<li><a href="#">二手车迁入与迁出限制条款</a></li>
+                    <li><a href="#">二手车迁入与迁出限制条款</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="center_serven_r">
+        	<h3>即将上市</h3>
+        	<div class="center_server_r_line">
+            	<i class="one">。</i>
+            	<i class="two">。</i>
+                <i class="three">。</i>
+                <i class="fo">。</i>
+                <ul class="center_serven_r_ul">
+                	<li>
+                    	<p class="center_serven_r_jt">2014年8月07日</p>
+                        <p class="center_serven_r_bt">奥德赛</p>
+                    </li>
+                    <li>
+                    	<p class="center_serven_r_jt">2014年8月07日</p>
+                        <p class="center_serven_r_bt">奥德赛</p>
+                    </li>
+                    <li>
+                    	<p class="center_serven_r_jt">2014年8月07日</p>
+                        <p class="center_serven_r_bt">奥德赛</p>
+                    </li>
+                    <li>
+                    	<p class="center_serven_r_jt">2014年8月07日</p>
+                        <p class="center_serven_r_bt">奥德赛</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    	<p class="footer_t"><a href="#">集团介绍</a> | <a href="#">关于我们</a> |<a href="#"> 人才招聘</a> | <a href="#">网站地图</a> | <a href="#">客服中心</a> | <a href="#">友情链接</a></p>
+    	<p class="footer_b">京ICP备10020009号-2 版权所有@2011北京百得利汽车进出口集团有限公司</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<script src="js/jquery-1.7.2.js"></script>
+<style>
+/*nzk聂振科*/
+.big_box{background:url(img/con_bg.jpg) no-repeat center 55px #1b1a20;width:100%;margin:0 auto;max-width:1920px;}
+/*杰*/
+
+.syj_header{ height:55px;
+		     background:url(img/nav_bg.png);}
+.syj_header_top{ width:1000px;
+                 height:50px;
+				 margin:0 auto;
+				 background:url(img/logo_dark.png) no-repeat; top:0; left:0;}
+.syj_header_top > h2{ width:118px;
+                    float:left;
+                    height:50px;}
+.syj_header_top > h2 > a{ width:118px;
+                      height:36px;
+					  text-indent:-888em;
+					  display:inline-block;
+					  margin-top:6px;
+					  border-right:1px solid #cecece;}
+.syj_top_lft{ float:left;
+              width:240px;
+			  height:50px;
+			  margin-left:304px;
+			  border-right:1px solid #e1e1e1;}
+.syj_top_lft > li{ height:50px;
+                   float:left;
+				   position:relative;
+				   padding-left:50px;
+				   line-height:50px;}
+.syj_top_lft > li >i{ width:24px; height:24px;
+                      display:inline-block;
+					  transition:all 1s;
+					  position:absolute; top:13px; left:18px;
+                      background:url(img/cyou_sprite.png) no-repeat -139px 0;}
+.syj_top_lft > li >i:hover{ transform:rotate(360deg)}
+.syj_header_top .syj_top_i1{ background:url(img/cyou_sprite.png) no-repeat -164px 0;}
+.syj_header_top .syj_top_i2{ background:url(img/cyou_sprite.png) no-repeat -189px 0;}
+.syj_qlbk{ padding:0;}
+.syj_lp{ float:right;
+         margin-right:10px;}
+.syj_lp a{ height:50px;
+           padding-left:30px;
+		   padding-right:26px;
+		   line-height:50px;
+		   display:inline-block;
+		   position:relative;
+		   border-right:1px solid #e1e1e1;}
+.syj_lp a i{ width:7px; height:4px;
+           display:inline-block;                  
+           background:url(img/cyou_sprite.png) no-repeat -206px -148px;
+           position:absolute; right:12px; top:23px;}
+		   
+.syj_nav{ width:1000px;                 
+      height:110px;
+	  margin:0 auto;
+	  background:url(img/11.jpg) no-repeat;}
+.syj_nav h1{ width:190px; 
+         height:100px;
+		 margin-left:7px;
+		 float:left;
+		 background:url(img/logo.gif) no-repeat;}
+.syj_nav h1 a{ width:190px;
+           height:100px;
+		   display:inline-block;}
+.syj_nav_ul{ width:775px; height:110px;
+             float:left;
+			 margin-left:28px;}
+.syj_nav_ul li{ width:86px;              
+                height:107px;
+                float:left;
+				position:relative;
+				text-align:center;
+				font-size:16px;
+				line-height:110px;}
+.syj_nav_sh{ overflow:hidden;}
+.syj_nav_ul .syj_top_sy{ width:60px;}
+.syj_nav_li1{ margin-left:5px;}
+.syj_nav_ul li:hover{ border-bottom:3px solid #93C;}
+
+.syj_nav_yx{ width:100%; 
+             height:98px;
+			 font-size:12px;
+			 padding-top:12px; 
+		     text-align:center;
+			 display:none;
+			 background:url(img/nav_new_hover.jpg) no-repeat;
+			 position:absolute; top:0; left:0;}
+.syj_nav_yx a{ display:block;color:#e6e2e0; line-height:24px;}
+.syj_nav_ul li:hover .syj_nav_yx{ display:block;}
+.guanggao{ width:1000px;
+           margin:0 auto;
+		   position:relative;}
+/*nzk聂振科*/
+.nzk_box{width:1000px;margin:0 auto;}
+.nzk_box_r,.nzk_box_l{float:left;}
+
+.nzk_box_l li{float:left;}
+.nzk_box_l a{display:block;height:109px;}
+.nzk_box_l_one{width:216px;background:url(img/sprite.jpg) no-repeat 0px 0px;}
+.nzk_box_l_two{width:102px;background:url(img/sprite.jpg) no-repeat -216px 0px;}
+.nzk_box_l_three{width:100px;background:url(img/sprite.jpg) no-repeat -318px 0px;}
+.nzk_box_l_for{width:100px;background:url(img/sprite.jpg) no-repeat -418px 0px;}
+.nzk_box_l_forw{width:98px;background:url(img/sprite.jpg) no-repeat -518px 0px;}
+
+.nzk_box_l_one:hover{width:216px;background:url(img/sprite.jpg) no-repeat 0px -110px;}
+.nzk_box_l_two:hover{width:102px;background:url(img/sprite.jpg) no-repeat -216px -110px;}
+.nzk_box_l_three:hover{width:100px;background:url(img/sprite.jpg) no-repeat -318px -110px;}
+.nzk_box_l_for:hover{width:100px;background:url(img/sprite.jpg) no-repeat -418px -110px;}
+.nzk_box_l_forw:hover{width:98px;background:url(img/sprite.jpg) no-repeat -518px -110px;}
+.nzk_box_r_t{padding-top:6px;padding-left:12px;}
+.nzk_box_r_t_list{background:url(img/sever.png) no-repeat;width:277px;height:50px;padding-top:5px;padding-left:84px;}
+.nzk_box_r_t_list li{line-height:23px;}
+.nzk_box_r_t_list a{color:#adb9e0;height:12px;}
+.nzk_box_r_t_list span{color:#f00000;height:12px;margin:0px 3px;}
+
+.nzk_box_r_b{width:381px;height:40px;background:#353b47;border:1px solid #433b4f;border-bottom:1px solid #5c6069;margin-top:6px;}
+.nzk_box_r_b p{float:left;margin-left:5px;margin-top:12px;color:#adb9e0;}
+.nzk_box_r_b a{color:#f93d1a;margin:0px 3px;text-decoration:underline;}
+.nzk_box_r_b b{float:left;background:url(img/sprite.jpg) no-repeat -603px -227px;width:14px;height:14px;margin-top:13px;margin-left:5px;}
+.nzk_box_r_b i{float:left;margin-top:12px;color:#adb9e0;margin-left:30px;}
+.nzk_box_r_b_list{float:left;background:url(img/sprite.jpg) no-repeat -233px -228px;width:143px;height:24px;margin-top:8px;}
+.nzk_box_r_b li{float:left;}
+.nzk_box_r_b_list_one{display:block;width:45px;height:24px;margin:0px;}
+.nzk_box_r_b_list_two{display:block;width:45px;height:24px;margin:0px;}
+.nzk_box_r_b_list_three{display:block;width:35px;height:24px;margin:0px;}
+
+.nzk_box_r_b_list_one:hover{width:40px;height:24px;background:url(img/sprite.jpg) no-repeat -398px -228px;}
+.nzk_box_r_b_list_two:hover{width:40px;height:24px;background:url(img/sprite.jpg) no-repeat -442px -228px;}
+.nzk_box_r_b_list_three:hover{width:35px;height:24px;background:url(img/sprite.jpg) no-repeat -488px -228px;}
+
+.nzk_4pic{width:1000px;margin:0 auto;margin-bottom:30px;}
+.nzk_4pic_list{margin-top:32px;}
+.nzk_4pic_list li{float:left;}
+.nzk_4pic_list_li{margin-right:8px;}
+.nzk_4pic_list img{border:1px solid #433b4f;}
+
+.nzk_position1{position:absolute;top:50%;left:0px;margin-top:-61px;width:35px;height:122px;background:url(img/nzk1.png) no-repeat;}
+.nzk_position2{position:absolute;top:25%;left:10px;margin-top:-61px;width:27px;height:63px;background:url(img/nzk2.png) no-repeat;}
+.nzk_position3{position:absolute;top:47%;left:10px;margin-top:-61px;width:27px;height:64px;background:url(img/nzk3.png) no-repeat;}
+.nzk_footer_pic{background:url(img/game_anc.jpg) no-repeat center;;margin:0 auto;width:1000px;height:30px;color:#9587ab;font-size:16px;text-align:center;line-height:42px;}
+.nzk_footer p{text-align:center;font-size:16px;color:#615770;}
+.nzk_footer_text{margin-top:22px;margin-bottom:15px;}
+.nzk_footer h3{background:url(img/nav_bg.png) no-repeat center -55px;height:35px;margin-top:40px;}
+.copyright{margin-left:77px;width:1000px;margin:0 auto;}
+.copyright i{background:url(img/cylogo.png) no-repeat;width:102px;height:51px;float:left;}
+.copyright b{background:url(img/gongan.png) no-repeat;width:31px;height:38px;float:left;margin-left:18px;}
+.copyright div{font-size:12px;color:#535353;margin-left:17px;float:left;}
+.copyright p{\margin-top:5px;}
+/*李彩娟*/
+.lcj_moshou { width:1000px;
+              margin:0 auto;}
+			  
+.lcj_moshou_l{ width:618px;
+               height:305px;
+			   position:relative;
+			   float:left;}
+			   
+.lcj_moshou_l .lcj_moshou_l_show
+              { display:block;}	
+			  		   
+.lcj_moshou_l img{ display:none;
+                   width:618px;
+                   height:305px;}
+.lcj_moshou_l_ul { width:100px;
+                   position:absolute;
+                   bottom:20px;
+				   right:40px;
+				   }
+.lcj_moshou_l_ul li{ width:15px; 
+                     height:15px; 
+					 background:#3a3e47;
+					 float:left;
+					 border-radius:50%;
+					 margin-left:5px;}
+					 
+.lcj_moshou_l_ul .lcj_moshou_l_ul_active
+                    {background:#d0290a;}
+					
+.lcj_moshou_r { width:382px;
+                height:305px;
+				float:left;}
+.lcj_moshou_r_ul{width:380px;
+                 height:56px;
+				 background:url(img/sprite.jpg) 0px -261px;
+				 border:1px solid #5c606b;}					
+.lcj_moshou_r_ul>li{ font-size:14px;
+                     font-weight:bold;
+					 float:left;
+					 width:95px;
+					 text-align:center;
+					 position:relative;}
+				
+.lcj_moshou_r_ul>li>a{ color:#fff; padding-top:20px;
+                      display:block;}
+
+.lcj_moshou_r_ul>li>i{width:95px;
+                     height:56px;
+					 display:none;
+					 font-size:14px;
+					 color:#fff;
+                     font-weight:bold;
+					 padding-top:20px;}
+					  
+.lcj_moshou_r_ul_l1{background:url(img/sprite.jpg) no-repeat 0px -323px;}
+
+.lcj_moshou_r_ul_l2{background:url(img/sprite.jpg) no-repeat -94px -323px;}
+						
+					
+.lcj_moshou_r_ul_l3{background:url(img/sprite.jpg) no-repeat -190px -323px;}
+				    					
+					
+.lcj_moshou_r_ul_l4{background:url(img/sprite.jpg) no-repeat -285px -322px;}
+					                 					
+										
+.lcj_moshou_r_ul>li:hover i{ display:block;}
+.lcj_moshou_r_ul>li:hover a{ display:none;}
+
+.lcj_moshou_r_ul_l1_d1{position:absolute;
+					   top:56px;left:-1px;
+					  }
+					   
+.lcj_moshou_r_ul_l1_d2{position:absolute;
+					   top:56px;left:-96px;
+					   }
+
+.lcj_moshou_r_ul_l1_d3{position:absolute;
+					   top:56px;left:-191px;
+					   }
+
+.lcj_moshou_r_ul_l1_d4{position:absolute;
+					   top:56px;left:-286px;
+					   }
+					   
+.lcj_moshou_r_ul .lcj_active{ display:block;}
+					   					   
+.lcj_moshou_r_ul div{width:382px;
+                     height:248px;
+					 background:#322e3f;
+					 position:absolute;
+					 display:none;}
+
+.lcj_moshou_r_ul li div>p{ color:#C00;
+                           line-height:30px;}
+.lcj_ol{ color:#8ea7ca;}
+.lcj_ol	li{ margin-top:10px;}	
+
+/*裴元秋*/
+.pyq_container {
+	width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	background: #1d1a23;
+}
+.pyq_side {
+	float: left;
+	width: 656px;
+	height: 346px;
+	border: 1px solid #433b4f;
+}
+.pyq_content {
+	float: right;
+	width: 319px;
+	height: 346px;
+	
+}
+.pyq_side_btn {
+	height: 58px;
+	width: 656px;
+	border-bottom: 1px solid #433b4f;
+	background: url(img/pyq_2.jpg) no-repeat 0px -412px;
+}
+.pyq_side_btn>li {
+	float: left;
+	width: 109px;
+	height: 57px;
+	text-align: center;
+	font-size: 16px;
+	color: #f7f4ff;
+	line-height: 57px;
+}
+.pyq_side_btn .li_last {
+	border-right: 0px;
+	width: 107px;
+}
+.pyq_side_list>li {
+	display: none;
+}
+.pyq_side_btn>li>i {
+	display: block;
+	height: 57px;
+	width: 108px;
+}
+.pyq_side_btn_i1:hover {
+	background: url(img/pyq_2.jpg) no-repeat 0px -471px;height:60px;
+}
+.pyq_side_btn_i2:hover {
+	background: url(img/pyq_2.jpg) no-repeat -108px -471px;height:60px;
+}
+.pyq_side_btn_i3:hover {
+	background: url(img/pyq_2.jpg) no-repeat -218px -471px;height:60px;
+}
+.pyq_side_btn_i4:hover {
+	background: url(img/pyq_2.jpg) no-repeat -329px -471px;height:60px;
+}
+.pyq_side_btn_i5:hover {
+	background: url(img/pyq_2.jpg) no-repeat -437px -471px;height:60px;
+}
+.pyq_side_btn_i6:hover {
+	background: url(img/pyq_2.jpg) no-repeat -549px -471px;height:60px;
+}
+
+.pyq_container .active{background: url(img/pyq_2.jpg) no-repeat 0px -471px;height:60px;}
+.pyq_content_list>li {
+	width: 319px;
+	height: 25px;
+	background: #2a2732;
+	margin-bottom: 3px;
+	position: relative;
+	border-radius:5px;
+	
+}
+.pyq_content_list_i {
+	width: 4px;
+	height: 8px;
+	display: block;
+	float: left;
+	margin-left: 11px;
+	margin-right: 12px;
+	background:url(img/pyq_6.jpg) no-repeat;
+	margin-top:9px;
+	
+}
+.pyq_content_list_p {
+	color: #a6b2d8;
+	float: left;
+	margin-top: 7px;
+}
+.pyq_content_list_span {
+	width: 55px;
+	height: 25px;
+	background: #544f63;
+	float: right;
+	color: #a6b2d8;
+	text-align: center;
+	line-height: 25px;
+	border-radius:5px;
+}
+.pyq_content_h3 {
+	font-size: 18px;
+	color: #d8823c;
+	margin-bottom: 17px;
+	background:url(img/pyq_5.jpg) no-repeat;
+	height:30px;
+	padding-left:40px;
+}
+.pyq_hide {
+	width: 320px;
+	height: 149px;
+	border: 1px solid #ccc;
+	position: absolute;
+	bottom: 34px;
+	left: 0px;
+	display: none;
+}
+.pyq_hide_opc {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 319px;
+	height: 36px;
+	background: rgba(21,3,10,0.5);
+	color: #fff;
+	font-weight: bold;
+	line-height: 36px;
+}
+.pyq_container .show {
+	display: block;
+}
+
+
+/*张丹青*/
+
+.zdq-content{background:#19161f;width:1000px;margin:0 auto;}
+.zdq-left-top-box{width:215px;height:190px;background:url(img/zdq-bg.jpg)no-repeat 0 -555px;}
+.zdq-t-p{font-size:16px;color:#f3ca86;text-align:center;height:44px;line-height:44px;}
+.zdq-list li{font-size:14px;color:#9587ab;background:url(img/zdq-zidian.png)no-repeat left center;margin-left:24px;text-indent:3px;margin-bottom:16px;cursor:pointer;}
+.zdq-list{padding-top:22px;padding-bottom:3px;float:left;margin-right:12px;}
+
+.zdq-dianzan{padding-top:23px;background:#19161f;}
+.zdq-meiti{width:205px;height:35px;border:5px solid #322b3c;font-size:16px;color:#a295b7;line-height:35px;text-align:center;background:url(img/zdq-jiao.png)no-repeat 161px center #19181d;cursor:pointer;}
+.zdq-content-left{float:left;margin-right:19px;}
+.zdq-content-middle{float:left;}
+.zdq-h3{font-size:20px;color:#f3ca90;background:url(img/zdq-bg.jpg)no-repeat -613px -352px;text-indent:44px;height:25px;line-height:25px;}
+
+.zdq-xxk-list li{width:104px;height:46px;font-size:14px;color:#a295b7;background:#1a191f;border:1px solid #433b4f;float:left;text-align:center;line-height:46px;border-right:none;border-bottom:none;}
+
+.zdq-big-box{width:422px;height:256px;border:1px solid #433b4f;background:#322b3c;}
+.zdq-wjgl-ipg{float:left;margin-top:23px;margin-left:15px;}
+.zdq-box-list{float:left;margin-top:28px;}
+.zdq-box-list li{font-size:12px;color:#9587ab;background:url(img/zdq-zidian.png)no-repeat 0 center;text-indent:3px;margin-bottom:14px;margin-left:14px;cursor:pointer;}
+.zdq-xxk-list{margin-top:14px;float:left;}
+
+
+
+
+.zdq-xxk-list .active{background:#322b3c;color:#fff;}
+
+.zdq-big-box{display:none;}
+.show{display:block;}
+
+.zdq-list-last{background:url(img/zdq-jia.png)no-repeat 20px center #1a191f;font-size:12px;text-indent:35px;text-align:left;cursor:pointer;float:left;width:104px;height:46px;color:#a295b7;border-left:1px solid #433b4f;line-height:46px;margin-top:14px;}
+
+.zdq-mtzq{margin-top:41px;}
+.zdq-content-middle{padding-bottom:62px;}
+/*张丹青*/
+
+
+
+
+
+
+
+
+.tvb-list-r{float:left;margin-left:20px;}
+.tvb-gameziliao{margin-bottom:37px;}
+.tvb-ziliao-tit{margin-bottom:10px;}
+.tvb-ziliao-tit>.tvb-b1{width:28px;height:31px;background:url(img/sprite.jpg) no-repeat -628px -39px;float:left;}
+.tvb-ziliao-tit>h3{float:left;font-size:20px;color:#f4cc91;margin-left:14px;height:31px;line-height:31px;}
+.tvb-ziliao-con{width:286px;height:303px;border:1px solid #4b3f5c;padding:0 17px;}
+.tvb-ziliao-lists{font-size:14px;}
+.tvb-ziliao-lists>li{height:26px;width:100%;border-top:1px dashed #4b3f5c;padding:16px 0;}
+.tvb-ziliao-lists .tvb-ziliao-list1{border:none;}
+.tvb-ziliao-lists li>p{height:26px;padding:0 8px;height:26px;line-height:26px;background:#594f67;position:relative;color:#fff;float:left;}
+.tvb-sanjiao{position:absolute;right:-9px;top:7px;background:url(img/tvb-sanjiao.png) no-repeat;width:9px;height:12px;}
+
+.tvb-con-lis1{padding-left:94px;padding-top:6px;}
+.tvb-con-lis1>li{float:left;color:#9587ab;border-left:2px solid #4867ab;padding:0 3px;}
+.tvb-jinzhan{width:100%;height:39px;border:2px solid #4b3f5c;display:block;font-size:20px;font-weight:bold;text-align:center;line-height:39px;}
+
+
+.tvb-view{margin-bottom:37px;}
+.tvb-view-tit{margin-bottom:10px;}
+.tvb-view-tit>b{width:33px;height:31px;background:url(img/sprite.jpg) no-repeat -623px -77px;float:left;}
+.tvb-view-tit>h3{float:left;font-size:20px;color:#f4cc91;margin-left:14px;height:31px;line-height:31px;}
+
+.tvb-view-lists{width:210px;height:46px;border-top:1px solid #4b3f5c;border-left:1px solid #4b3f5c;float:left;}
+.tvb-view-lists>li{width:104px;height:46px;border-bottom:1px solid #4b3f5c;border-right:1px solid #4b3f5c;float:left;font-size:14px;color:#a295b7;text-align:center;line-height:46px;}
+.tvb-more{float:left;width:104px;height:46px;font-size:14px;color:#a295b7;text-align:center;line-height:46px;}
+.tvb-view-con-lists1{width:320px;height:256px;border:1px solid #4b3f5c;}
+.tvb-view-con-lists1>li{padding:23px 11px 0;float:left;}
+.tvb-view-con-lists2{width:320px;height:256px;border:1px solid #4b3f5c;}
+.tvb-view-con-lists2>li{padding:23px 11px 0;float:left;}
+.tvb-two-lists ul{display:none;}
+.tvb-two-lists{}
+.tvb-active{color:#fff;background:#322b3c;}
+</style>
+
+<script>
+//张丹青
+window.onload=function(){
+	var zdqobtn=document.getElementById('zdq-biaoti');
+	var zdqabtn=zdqobtn.getElementsByTagName('li');
+	var zdqobox=document.getElementById('zdq-xk-box');
+	var zdqabox=zdqobox.getElementsByTagName('div')
+	
+	for(var i=0;i<zdqabtn.length;i++){
+		zdqabtn[i].index=i
+		zdqabtn[i].onmouseover=function(){
+			for(var i=0;i<zdqabtn.length;i++){
+			zdqabtn[i].className='';
+			//$(abox).removeClass='show';
+			$(zdqabox).hide();
+			}
+			this.className='active';
+			//abtn[3].className='zdq-list-last';
+			//$(abox).eq($(this).index()).addClass='show';
+			$(zdqabox).eq($(this).index()).show();
+			}
+			}
+			
+			
+	var zdqobtn2=document.getElementById('zdq-biaoti2');
+	var zdqabtn2=zdqobtn2.getElementsByTagName('li');
+	var zdqobox2=document.getElementById('zdq-xk-box2');
+	var zdqabox2=zdqobox2.getElementsByTagName('div')
+	
+	for(var i=0;i<zdqabtn2.length;i++){
+		zdqabtn2[i].index=i
+		zdqabtn2[i].onmouseover=function(){
+			for(var i=0;i<zdqabtn2.length;i++){
+			zdqabtn2[i].className='';
+			//$(abox).removeClass='show';
+			$(zdqabox2).hide();
+			}
+			this.className='active';
+			//abtn2[3].className='zdq-list-last';
+			//$(abox).eq($(this).index()).addClass='show';
+			$(zdqabox2).eq($(this).index()).show();
+			}
+			}
+	
+	
+	
+//张丹青
+
+
+
+
+
+	var tvbBtn=document.getElementById('tvb-btn');
+	var tvbBtn_li=tvbBtn.getElementsByTagName('li');
+	var tvbImg=document.getElementById('tvb-img-list');
+	var tvbImg_ul=tvbImg.getElementsByTagName('ul');
+	for(var i=0; i<tvbBtn_li.length;i++){
+			tvbBtn_li[i].index=i;
+			tvbBtn_li[i].onmouseover=function(){
+				for(var i=0;i<tvbBtn_li.length;i++){
+					tvbBtn_li[i].className='';
+					tvbImg_ul[i].style.display='none';
+				}
+				tvbImg_ul[this.index].style.display='block' ;
+				this.className='tvb-active';	
+			};
+		}
+	
+	
+//吴凡
+
+	var oLcjbtn=document.getElementById('lcj_moshou_ul');
+	  var aLcjbtn=oLcjbtn.getElementsByTagName('li');
+	  
+	  var oLcjpic=document.getElementById('lcj_moshou_l');
+	  var aLcjpic=oLcjpic.getElementsByTagName('img');
+	  
+	     for(var i=0;i<aLcjbtn.length;i++){
+			 aLcjbtn[i].index=i;
+			 aLcjbtn[i].onmouseover=function(){
+				for(var i=0;i<aLcjbtn.length;i++){ 
+				  aLcjpic[i].className='';
+			      aLcjbtn[i].className='';
+				};
+		  aLcjpic[this.index].className='lcj_moshou_l_show';	
+		  this.className='lcj_moshou_l_ul_active';
+		  } ;
+		};
+		
+	
+	 /* var oLcj_box=document.getElementById('lcj_box');
+	  var aLcj_box=oLcj_box.getElementsByTagName('li');
+	   for(var i=0;i<aLcj_box.length;i++){
+		   aLcj_box[i].onmouseover=function(){
+		    var aLcj_boxd=this.getElementsByTagName('div')[0];
+			   aLcj_boxd.className='lcj_active';
+			   };
+			 aLcj_box[i].onmouseout=function(){
+		    var aLcj_boxd=this.getElementsByTagName('div')[0];
+			 aLcj_boxd.className='lcj_active';
+			   }
+			   
+		   }
+		   }*/
+		   
+/*
+		var oLcj_box=document.getElementById('lcj_box');
+		var aLcj_box=oLcj_box.children;
+		for(var i=0;i<aLcj_box.length;i++){
+			aLcj_box[i].onmouseover=function(){
+				var oDiv=this.getElementsByTagName('div')[0];
+				 oDiv.style.display='block';
+			};
+			aLi[i].onmouseout=function(){
+				var oDiv=this.getElementsByTagName('div')[0];
+				oDiv.style.display='none';
+			};	
+		};
+		   */
+		   
+	$('.lcj_moshou_r_ul li').mouseover(function(){
+		   
+		   $('.lcj_moshou_r_ul div').hide();
+		   $('.lcj_moshou_r_ul div').eq($(this).index()).show();
+		  
+		 });	
+
+
+}
+
+ $(function(){
+	       $('.pyq_side_btn li').mouseover(function(){
+		
+		  
+			      $('.pyq_side_list li').hide();
+                  $('.pyq_side_list li').eq($(this).index()).show();
+		   });
+		   
+		   
+		   
+		  
+		   $('.pyq_content_list li ').mouseover(function(){
+		
+		  
+			   $('.pyq_hide ').hide();
+               $('.pyq_hide ').eq($(this).index()).show();
+		   }); 
+		  
+		   
+	   });
+	   
+
+
+</script>
+
+</head>
+
+<body>
+<div class="big_box">
+<!--孙永杰-->
+    <div class="header_box">
+        <div class="syj_header">
+            <div class="syj_header_top clearfix">
+                <h2><a href="#">畅游</a></h2>
+                <ul class="syj_top_lft clearfix">
+                    <li class="syj_qlbk">
+                        <a href="#">注册</a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="#">充值</a>
+                        <i class="syj_top_i1"></i>
+                    </li>
+                    <li>
+                        <a href="#">畅游+</a>
+                        <i class="syj_top_i2"></i>
+                    </li>
+                </ul>
+                <p class="syj_lp">
+                    <a href="#">
+                        客服
+                        <i></i>
+                    </a>
+                    <a href="#">
+                        畅游全服务
+                        <i></i>
+                    </a>
+                    <a href="#">
+                        畅游全游戏
+                        <i></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="syj_nav clearfix">
+            <h1><a href="#"></a></h1>
+            <div class="syj_nav_sh">
+                <ul class="syj_nav_ul clearfix">
+                    <li class="syj_top_sy">
+                        <a href="#" class="syj_top_nav_a"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li>
+                    <li class="syj_nav_li1">
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li>
+                    <li class="syj_nav_li1">
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li> 
+                    <li class="syj_nav_li1">
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li> 
+                    <li class="syj_nav_li1">
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li> 
+                    <li class="syj_nav_li1">
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li> 
+                    <li>
+                        <a href="#" class="syj_top_nav_a"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li> 
+                    <li>
+                        <a href="#" class="top_btn"></a>
+                        <p class="syj_nav_yx">
+                            <a href="#">新手指南</a>
+                            <a href="#">职业专题</a>
+                            <a href="#">资料站</a>
+                            <a href="#">常见问题</a>
+                        </p>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+        <div class="guanggao">
+        	
+            <img src="img/1212.jpg" />
+            <a href="#" class="nzk_position1"></a>
+        </div>
+    </div>
+<!--nzk第二部分上部分-->
+	<div class="nzk_box clearfix">
+    	<div class="nzk_box_l" id="nzk_box">
+        	<ul class="nzk_box_l_list">
+            	<li class="nzk_box_l_one"><a href="#"></a></li>
+                <li class="nzk_box_l_two"><a href="#"></a></li>
+                <li class="nzk_box_l_three"><a href="#"></a></li>
+                <li class="nzk_box_l_for"><a href="#"></a></li>
+                <li class="nzk_box_l_forw"><a href="#"></a></li>
+            </ul>
+        </div>
+    	<div class="nzk_box_r">
+        	<div class="nzk_box_r_t">
+            	<ul class="nzk_box_r_t_list">
+                	<li><a href="#">电信一区<span>【元素殿堂】</span>欢迎进驻！</a></li>
+                	<li><a href="#">网通一区<span>【雷霆之怒】</span>欢迎进驻！</a></li>
+                </ul>
+            
+            </div>
+        	<div class="nzk_box_r_b">
+            	<p>距您上次访问有<a href="#" class="nzk_box_r_b_nub">200</a>条更新</p>
+                <b></b>
+                <i>关注:</i>
+            	<ul class="nzk_box_r_b_list">
+                	<li><a href="#" class="nzk_box_r_b_list_one"></a></li>
+                	<li><a href="#" class="nzk_box_r_b_list_two"></a></li>
+                    <li><a href="#" class="nzk_box_r_b_list_three"></a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+<!--第二部分下部分-->
+    <div class="lcj_moshou clearfix" >
+    <div class="lcj_moshou_l" id="lcj_moshou_l">
+       <img src="img/lcj_2.jpg" class="lcj_moshou_l_show"/>
+       <img src="img/lcj_1.jpg"/>
+       <img src="img/lcj_2.jpg"/>
+       <img src="img/lcj_1.jpg"/>
+       <img src="img/lcj_2.jpg"/>
+       <a href="#" class="nzk_position2"></a>
+   	   <a href="#" class="nzk_position3"></a>
+       <ul class="lcj_moshou_l_ul" id="lcj_moshou_ul">
+         <li class="lcj_moshou_l_ul_active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+       </ul>
+    </div>
+    <div class="lcj_moshou_r">
+         <ul class="lcj_moshou_r_ul clearfix" id='lcj_box'>
+           <li>
+             <i class="lcj_moshou_r_ul_l1">综合</i>
+             <div class="lcj_moshou_r_ul_l1_d1 lcj_active">
+               <p>4月8日联盟大赛</p>
+                <ol class="lcj_ol">
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                </ol>
+              </div>
+             <a href="#" >综合</a>
+           </li>
+           <li>
+             <i class="lcj_moshou_r_ul_l2">新闻</i>
+             <a href="#" >新闻</a>
+              <div class="lcj_moshou_r_ul_l1_d2">
+                 <p>联盟大赛及时的回收地上</p>
+                <ol class="lcj_ol">
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                </ol>
+              </div>
+           </li>
+           <li>
+             <i class="lcj_moshou_r_ul_l3">公告</i>
+             <a href="#" >公告</a>
+              <div class="lcj_moshou_r_ul_l1_d3">
+                  <p>时间到了卡的赛</p>
+                   <ol class="lcj_ol">
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                </ol>
+              </div>
+           </li>
+           <li>
+             <i class="lcj_moshou_r_ul_l4">媒体</i>
+             <a href="#" >媒体</a>
+              <div class="lcj_moshou_r_ul_l1_d4">
+                  <p>的撒娇了的快捷方式啦赛</p>
+                  <ol class="lcj_ol">
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                   
+                    <li>【新闻】综合综合综合综合综合综合
+                    <em>2-23</em>
+                   </li>
+                </ol>
+              </div>
+           </li>
+         </ul>
+      
+    
+    
+    
+    </div>
+</div>
+
+<!--nzk中间4个图片-->
+	<div class="nzk_4pic">
+    	<ul class="nzk_4pic_list clearfix">
+        	<li class="nzk_4pic_list_li"><a href="#"><img src="img/main_a2.jpg"></a></li>
+        	<li class="nzk_4pic_list_li"><a href="#"><img src="img/main_a2 (1).jpg"></a></li>
+            <li class="nzk_4pic_list_li"><a href="#"><img src="img/main_a22.jpg"></a></li>
+            <li><a href="#"><img src="img/main_a2.jpg"></a></li>
+        </ul>
+    </div>
+<!--裴元秋第三部分-->
+    <div class="pyq_container clearfix">
+  <div class="pyq_side">
+    <ul class="pyq_side_btn">
+      <li ><i class="pyq_side_btn_i1 active"></i></li>
+      <li ><i class="pyq_side_btn_i2"></i></li>
+      <li ><i class="pyq_side_btn_i3"></i></li>
+      <li ><i class="pyq_side_btn_i4"></i></li>
+      <li ><i class="pyq_side_btn_i5"></i></li>
+      <li ><i class="pyq_side_btn_i6"></i></li>
+    </ul>
+    <ul class="pyq_side_list">
+      <li class="show"><img src="img/pyq_1.jpg" /></li>
+      <li><img src="img/pyq_4.jpg" /></li>
+       <li><img src="img/pyq_1.jpg" /></li>
+      <li><img src="img/pyq_4.jpg" /></li>
+       <li ><img src="img/pyq_1.jpg" /></li>
+      <li><img src="img/pyq_4.jpg" /></li>
+    </ul>
+  </div>
+  <div class="pyq_content">
+    <h3 class="pyq_content_h3">活动中心</h3>
+    <ul class="pyq_content_list">
+      <li class="active1">
+        <div  class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide show"> 
+          <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+      <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+         <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+         <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+         <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+        <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+        <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+      <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+      <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+      <li>
+        <div class="clearfix"> <i class="pyq_content_list_i"></i>
+          <p class="pyq_content_list_p">成长礼</p>
+          <span class="pyq_content_list_span">进行中</span> </div>
+        <div class="pyq_hide"> <img src="img/pyq_3.jpg" />
+          <div class="pyq_hide_opc">女武神的密保</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--三个绝对定位图片-->
+	
+    
+    
+<!--张丹青-->
+    <div class="zdq-content clearfix">
+        <div class="zdq-content-left">
+            <div class="zdq-left-top-box">
+                <p class="zdq-t-p">快捷入口</p>
+                <div class="zdq-ul-box clearfix">
+                    <ul class="zdq-list">
+                        <li>账号管理</li>
+                     <li>账号管理</li>
+                        <li>账号管理</li>
+                     <li>账号管理</li>
+                    </ul>
+                    <ul class="zdq-list">
+                        <li>账号管理</li>
+                     <li>账号管理</li>
+                        <li>加速器下载</li>
+                        <li>加速器下载</li>
+                    </ul>
+                </div>
+                <img class="zdq-dianzan" src="img/zdq-dianzan.jpg"/>
+                <div class="zdq-meiti">媒体合作专区</div>
+                <img src="img/zdq-xiaodiaocha.jpg"/>
+            </div>
+        </div>
+        
+        
+        
+        <!---->
+        <div class="zdq-content-middle">
+            <h3 class="zdq-h3">玩家交流</h3>
+            <!--选项卡-->
+            <div class="clearfix">
+            <ul class="zdq-xxk-list clearfix" id="zdq-biaoti">
+                <li class="active">玩家攻略</li>
+                <li>论坛热帖</li>
+                <li>社区精华</li>
+                
+            </ul>
+            <a href="#" class="zdq-list-last">更多信息&gt;</a>
+            </div>
+            <div class="zdq-f-box" id="zdq-xk-box">
+                <div class="zdq-big-box clearfix show">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-wjgl.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   </ul>
+                </div>
+                <div class="zdq-big-box clearfix">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-wjgl.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   </ul>
+                </div>
+                <div class="zdq-big-box clearfix">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-meizi.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   </ul>
+                </div>
+            
+            </div>
+            <!--选项卡-->
+            
+            
+            
+            
+            
+            <h3 class="zdq-h3 zdq-mtzq">媒体专区</h3>
+            <!--选项卡-->
+            <div class="clearfix">
+            <ul class="zdq-xxk-list clearfix" id="zdq-biaoti2">
+                <li class="active">玩家攻略</li>
+                <li>论坛热帖</li>
+                <li>社区精华</li>
+               
+            </ul>
+             <a href="#" class="zdq-list-last">更多信息&gt;</a>
+             </div>
+            <div class="zdq-f-box" id="zdq-xk-box2">
+                <div class="zdq-big-box clearfix show">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-wjgl.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   </ul>
+                </div>
+                <div class="zdq-big-box clearfix">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-wjgl.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   <li>受到首都圣何塞蛋糕圣诞节华盛顿读</li>
+                   </ul>
+                </div>
+                <div class="zdq-big-box clearfix">
+                    <img class="zdq-wjgl-ipg" src="img/zdq-meizi.jpg"/>
+                   <ul class="zdq-box-list">
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   <li>生活技能之烹饪技能详细解读</li>
+                   </ul>
+                </div>
+            
+            </div>
+            <!--选项卡-->
+            
+            
+            
+            
+        </div>
+    
+    
+    
+    <div class="tvb-list-r">
+        <div class="tvb-gameziliao">
+            <div class="tvb-ziliao-tit clearfix">
+                <b class="tvb-b1"></b>
+                <h3>游戏资料</h3>
+            </div>
+            <div class="tvb-ziliao-con">
+                <ul class="tvb-ziliao-lists clearfix">
+                    <li class="tvb-ziliao-list1 clearfix">
+                        <p>新手入门<b class="tvb-sanjiao"></b></p>
+                        <ul class="tvb-con-lis1">
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                        </ul>
+    
+                    </li>
+                    <li>
+                        <p>新手入门<b class="tvb-sanjiao"></b></p>
+                        <ul class="tvb-con-lis1 clearfix">
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                        </ul>
+    
+                    </li>
+                    <li>
+                        <p>新手入门<b class="tvb-sanjiao"></b></p>
+                        <ul class="tvb-con-lis1 clearfix">
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                        </ul>
+    
+                    </li>
+                    <li>
+                        <p>新手入门<b class="tvb-sanjiao"></b></p>
+                        <ul class="tvb-con-lis1 clearfix">
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                            <li>注册账号</li>
+                        </ul>
+    
+                    </li>
+    
+                </ul>
+                <a href="#" class="tvb-jinzhan">进入资料站</a>
+            </div>
+        </div>
+        <div class="tvb-view">
+            <div class="tvb-view-tit clearfix">
+                <b></b>
+                <h3>视觉欣赏</h3>
+            </div>
+            <div class="tvb-view-con clearfix">
+            
+                <ul class="tvb-view-lists clearfix" id="tvb-btn">
+                    <li class="tvb-active">游戏视频</li>
+                    <li>游戏截图</li>
+                    
+                </ul>
+                <div class="tvb-more">更多信息&gt;</div>
+                
+            </div>
+            <div class="tvb-two-lists clearfix" id="tvb-img-list">
+                <ul class="tvb-view-con-lists1 clearfix" style="display:block;" >
+                     <li><img src="img/tvb-pc1.png"  /></li> 
+                     <li><img src="img/tvb-pc1.png"  /></li>
+                     <li><img src="img/tvb-pc1.png"  /></li>
+                     <li><img src="img/tvb-pc1.png"  /></li>    
+                </ul>
+                <ul class="tvb-view-con-lists2 clearfix">
+                     <li><img src="img/tvb-pc2.png"  /></li>
+                     <li><img src="img/tvb-pc2.png"  /></li>
+                     <li><img src="img/tvb-pc2.png"  /></li>
+                     <li><img src="img/tvb-pc2.png"  /></li>
+                </ul>
+            
+            </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    </div>
+<!--聂振科尾部-->
+
+	<div class="nzk_footer">
+    	<p class="nzk_footer_pic">健康游戏公告</p>
+    	<p class="nzk_footer_text">抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+        <p>本游戏适合18周岁以上的成年人用户，未满18周岁的未成年用户请在家长的监督下进行游戏。</p>
+        <h3></h3>
+    </div>
+    <div class="copyright clearfix">
+    	<i></i>
+    	<b></b>
+        <div>
+            <p>北京畅游时代数码技术有限公司版权所有 COPYRIGHT © 2011 CHANGYOU.COM LIMITED. ALL RIGHTS RESERVED. 法律声明 | 联系我们</p>
+            <p>京网文[2011]0260-093号 | 京ICP证：070525号</p>
+    	</div>
+    </div>
+</div>
+</body>
+</html>
