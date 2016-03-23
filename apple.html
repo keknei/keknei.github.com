@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+body,html{background:#efefef;height:100%;}
+.box{position:absolute;top:50px;left:0;width:100%;text-align:center;}
+.box input{width:100px;}
+.images{position:absolute;bottom:250px;left:0;width:100%;text-align:center;}
+.images img{width:64px;height:64px;}
+.mac{background:url(images/mac.png) no-repeat;height:100%;width:800px;margin:0 auto;}
+</style>
+<script>
+window.onload=function (){
+	var oDiv1=document.getElementById('box');
+	//var aInp=oDiv1.getElementsByTagName('input');
+	var oDiv2=document.getElementById('img');
+	var aImg=oDiv2.getElementsByTagName('img');	
+	document.onmousemove=function (ev){
+		var oEvent=ev || event;
+		for (var i=0;i<aImg.length;i++)
+		{
+			var a=oEvent.clientY-(aImg[i].offsetTop+oDiv2.offsetTop+aImg[i].offsetHeight/2);
+			var b=oEvent.clientX-(aImg[i].offsetLeft+oDiv2.offsetLeft+aImg[i].offsetWidth/2);
+			var c=Math.sqrt(a*a+b*b);
+			var scale=(1-c/500).toFixed(2);
+			(scale<0.5) && (scale=0.5);
+			//aInp[i].value=scale;
+			aImg[i].style.width=128*scale+'px';
+			aImg[i].style.height=128*scale+'px';
+		}	
+	};
+};
+</script>
+</head>
+
+<body>
+	<div class="mac">
+		<!--<div class="box" id="box">
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />   
+		<input type="text" />
+		</div>-->
+		<div class="images" id="img">
+			<img src="images/apple/1.png" />
+			<img src="images/apple/2.png" />
+			<img src="images/apple/3.png" />
+			<img src="images/apple/4.png" />
+			<img src="images/apple/5.png" />
+		</div>
+	</div>
+</body>
+</html>

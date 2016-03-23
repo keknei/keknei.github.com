@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#273041;}
+li { list-style:none; }
+div { width:966px; margin:0 auto; }
+ul { width:300px; margin:10px;  float:left; }
+li { height:300px; background:#ccc; margin:10px 0; text-align:center; font-size:50px; }
+</style>
+<script>
+window.onload=function (){
+	var aUl=[];
+	var n=0;
+	for (var i=0;i<document.getElementsByTagName('ul').length;i++)
+	{
+		aUl.push(document.getElementsByTagName('ul')[i]);
+	}	
+	
+	createLi();
+	
+	window.onscroll=function (){
+		if (n>=5)
+		{
+			return true;
+		}
+		var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+		var clientTop=document.documentElement.clientHeight;
+		var height=document.body.scrollHeight;
+		
+		if (height<(scrollTop+clientTop+100))
+		{
+			createLi();	
+		}	
+	};
+	function createLi()
+	{
+		n++;
+		document.title=n;
+		var color=['red','blue','yellow','tomato','green'];
+		for (var i=0;i<20;i++)
+		{
+			var oLi=document.createElement('li');
+			oLi.style.height=rnd(100,300)+'px';
+			oLi.style.background=color[n-1];
+			aUl.sort(function (Ul1,Ul2){
+				return Ul1.offsetHeight-Ul2.offsetHeight;
+			});
+			aUl[0].appendChild(oLi);	
+		}
+	}
+	
+	function rnd(n,m)
+	{
+		return Math.floor(Math.random()*(m-n)+n);	
+	}
+};
+</script>
+</head>
+
+<body>
+	<div>
+		<ul></ul>
+		<ul></ul>
+		<ul></ul>
+	</div>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

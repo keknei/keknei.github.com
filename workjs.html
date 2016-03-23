@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+<link rel="stylesheet" href="css/base.css" />
+
+<style>
+body,html{background:#273041;height:100%;}
+h2{color:#fee818;font-size:40px;width:400px;margin:0 auto;text-align:center;font-weight:bold;padding:20px 0;}
+ul{width:888px;height:438px;margin:0 auto;display:none;}
+ul img{width:100%;height:100%;}
+ul li{width:280px;height:130px;float:left;margin:5px;border:3px solid #ccc;border-radius:5px;}
+
+ul li a{width:100%;height:100%;position:relative;overflow:hidden;display:block;}
+ul li span{width:100%;height:50px;position:absolute;left:0;bottom:-50px;font-size:16px;background:rgba(0,0,0,0.6);color:#fff;transition:1s all ease;font-weight:bold;line-height:50px;text-align:center;}
+ul li:hover span{bottom:0;}
+ol{width:120px;margin:0 auto;margin-top:30px;}
+ol li{width:30px;height:20px;background:#399;color:#fff;font-weight:bold;text-align:center;line-height:20px;float:left;margin:5px;cursor:pointer;}
+
+.box{display:block;}
+</style>
+<script src="javascripts/tween.js"></script>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var aLi=oBox.getElementsByTagName('li');
+	
+	var aUl=document.getElementsByTagName('ul');
+	var oOl=document.getElementById('btn');
+	var sLi=oOl.children;
+	
+	// 测试
+	
+	var arr=i=[
+	[
+	{href:"apple.html",src:"images/macmin.png",p:"菜单放大"},
+	{href:"照片墙.html",src:"images/car.png",p:"照片墙"},
+	{href:"手风琴4.html",src:"images/head.png",p:"手风琴"},
+	{href:"拖动切换.html",src:"images/drag.png",p:"拖拽切换"},
+	{href:"放大镜.html",src:"images/max.png",p:"放大镜"},
+	{href:"分块运动.html",src:"images/move.png",p:"分块运动"},
+	{href:"无缝滚动选项卡.html",src:"images/gunmove.png",p:"无缝滚动选项卡"},
+	{href:"图片延迟加载.html",src:"images/pictimme.png",p:"图片延迟加载"},
+	{href:"简易瀑布流.html",src:"images/water.png",p:"简易瀑布流"}
+	],
+	[
+	{href:"无限运动.html",src:"images/wumove.png",p:"无限运动"},
+	{href:"园.html",src:"images/yuanmove.png",p:"园运动"},
+	{href:"拖拽+碰撞.html",src:"images/dragpeng.png",p:"拖拽+碰撞"},
+	{href:"漂浮广告.html",src:"images/piao.png",p:"漂浮广告"},
+	{href:"文字阴影用途-文字渐渐显示打印出来.html",src:"images/zhujian.png",p:"文字逐渐打印"},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."}
+	],
+	[
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."},
+	{href:"javascrip:;",src:"images/none.png",p:"还在完善，静候..."}
+	]];
+	
+	
+	// 布局转换
+	var aPos=[];
+	for (var i=0; i<aLi.length; i++)
+	{
+		aPos.push({
+			left:aLi[i].offsetLeft,
+			
+			top:aLi[i].offsetTop
+		});
+		
+	}
+	
+	for (var i=0; i<aLi.length; i++)
+	{
+		aLi[i].style.position='absolute';
+		aLi[i].style.left=aPos[i].left+'px';
+		aLi[i].style.top=aPos[i].top+'px';
+		aLi[i].style.margin=0;
+	}
+	
+	// 动
+	var bFlag=false;
+	
+	for (var i=0;i<sLi.length;i++)
+	{
+		(function (index){
+			
+			sLi[index].onclick=function (ev){
+			
+			if (bFlag)
+			{
+				return;
+			}
+			
+			bFlag=true;
+			
+			var oEvent=ev || event;
+			var n=0;
+	
+			var timer=setInterval(function (){
+				(function (index){
+					move(aLi[n], {width:0, height:0, opacity:0, top:oEvent.clientY, left:oEvent.clientX}, {
+					complete:function (){
+						if (index == aLi.length-1)
+						{
+							
+							end();
+							
+						}
+					}
+				});
+				})(n);
+				//console.log(aLi[n].children[0].getAttribute('href'));
+				
+				aLi[n].children[0].href=arr[index][n].href;
+				
+				aLi[n].children[0].children[0].src=arr[index][n].src;
+				aLi[n].children[0].children[1].innerHTML=arr[index][n].p;
+				
+				
+				n++;
+				
+				if (n == aLi.length)
+				{
+					
+					clearInterval(timer);
+					
+				}
+			}, 100);
+		};
+		})(i);
+	}
+		
+	
+	
+	
+	function end()
+	{
+		/*var r=rnd(0, 256);
+		var g=rnd(0, 256);
+		var b=rnd(0, 256);
+		
+		for (var i=0; i<aLi.length; i++)
+		{
+			aLi[i].style.background='rgb('+r+', '+g+', '+b+')';
+		}
+		*/
+		var n=aLi.length-1;
+		
+		var timer=setInterval(function (){
+			(function (index){
+				move(aLi[n], {
+					width:280, height:130, top:aPos[n].top, 
+					left:aPos[n].left, opacity:1
+				}, {
+					complete:function (){
+						if (index == 0)
+						{
+							bFlag=false;
+						}
+					}
+				});
+			})(n);
+			
+			n--;
+			
+			if (n == -1)
+			{
+				clearInterval(timer);
+			}
+		}, 100);
+	}
+
+	
+	function rnd(n, m)
+	{
+		return Math.floor(Math.random()*(m-n)+n);
+	}
+	
+	
+	/*(function (){
+		var aUl=document.getElementsByTagName('ul');
+		var oOl=document.getElementById('btn');
+		var sLi=oOl.children;
+		
+		for (var i=0;i<sLi.length;i++)
+		{
+			sLi[i].index=i;
+			sLi[i].onclick=function (ev){
+				var oEvent=ev || event;
+				for (var i=0;i<sLi.length;i++)
+				{
+					aUl[i].className='clearfix';
+				}	
+				aUl[this.index].className='box clearfix';
+				//oEvent.cancelBubble=true;
+			};	
+		}	
+	})();*/	
+	
+};
+</script>
+</head>
+
+<body>
+	<h2>javascript</h2>
+	<div id="box">
+		<ul class="box clearfix">
+			<li>
+				<a href="apple.html" target="_blank">
+					<img src="images/macmin.png" alt="挂了" />
+					<span>菜单放大</span>
+				</a></li>
+			<li><a href="照片墙.html" target="_blank"><img src="images/car.png" alt="挂了" /><span>照片墙</span></a></li>
+			<li><a href="手风琴4.html" target="_blank"><img src="images/head.png" alt="挂了" /><span>手风琴</span></a></li>
+			<li><a href="拖动切换.html" target="_blank"><img src="images/drag.png" alt="挂了" /><span>拖拽切换</span></a></li>
+			<li><a href="放大镜.html" target="_blank"><img src="images/max.png" alt="挂了" /><span>放大镜</span></a></li>
+			<li><a href="分块运动.html" target="_blank"><img src="images/move.png" alt="挂了" /><span>分块运动</span></a></li>
+			<li><a href="无缝滚动选项卡.html" target="_blank"><img src="images/gunmove.png" alt="挂了" /><span>无缝滚动选项卡</span></a></li>
+			<li><a href="图片延迟加载.html" target="_blank"><img src="images/pictimme.png" alt="挂了" /><span>图片延时加载</span></a></li>
+			<li><a href="简易瀑布流.html" target="_blank"><img src="images/water.png" alt="挂了" /><span>简易瀑布流</span></a></li>
+		</ul>
+	</div>
+	<ol class="clearfix" id="btn">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ol>
+</body>
+</html>

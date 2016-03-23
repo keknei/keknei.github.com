@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手风琴</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#273041;}
+ul { overflow:hidden; position:relative; width:840px; height:305px;margin:0px auto;margin-top:100px; border:5px solid #ccc;border-radius:10px;}
+li { position:absolute; top:0; left:0; width:840px; list-style:none; }
+span { position:absolute; top:0; left:0; width:20px; height:205px; padding-top:100px;opacity:0.3;}
+img { width:840ppx; height:305px; }
+</style>
+<script src="javascripts/tween.js"></script>
+<script>
+window.onload=function (){
+	
+	
+	(function() {
+		var oAcc = document.querySelector("#accordion");
+		var aLi = oAcc.getElementsByTagName("li");
+		var oneW = aLi[0].offsetWidth;
+		var defaultW = 40;
+		for (var i = 1; i < aLi.length; i++) {
+			aLi[i].style.left = oneW - (aLi.length - i) * defaultW + "px"
+		}
+		for (var i = 0; i < aLi.length; i++) {
+			(function(index) {
+				aLi[i].onmouseover = function() {
+					for (var i = 0; i < aLi.length; i++) {
+						if (i <= index) {
+							move(aLi[i], {
+								left: i * defaultW
+							})
+						} else {
+							move(aLi[i], {
+								left: oneW - (aLi.length - i) * defaultW
+							})
+						}
+					}
+				}
+			})(i)
+		}
+	})();
+	
+};
+</script>
+</head>
+
+<body>
+	<ul id="accordion">
+		<li>
+			
+			<img src="images/0.jpg" />
+		</li>
+		<li>
+			
+			<img src="images/1.jpg" />
+		</li>
+		<li>
+			
+			<img src="images/2.jpg" />
+		</li>
+		<li>
+			
+			<img src="images/3.jpg" />
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

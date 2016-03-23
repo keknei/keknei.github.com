@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>漂浮广告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+        #div1{
+            width:200px;
+            height:200px;
+             background:url(images/c9d7e6cd7b899e51ad804b7946a7d933c8950d7a.jpg) no-repeat;background-size:100% 100%;border-radius:50%;border:2px solid #ccc;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+		body,html{background:#273041;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+
+            var iSpeedX=8;
+            var iSpeedY=6;
+
+            setInterval(function(){
+                var l=oDiv.offsetLeft+iSpeedX;
+                var t=oDiv.offsetTop+iSpeedY;
+
+                if(t>document.documentElement.clientHeight-oDiv.offsetHeight){
+                    t=document.documentElement.clientHeight-oDiv.offsetHeight;
+                    iSpeedY*=-1;
+                }
+                if(l>=document.documentElement.clientWidth-oDiv.offsetWidth){
+                    l=document.documentElement.clientWidth-oDiv.offsetWidth;
+                    iSpeedX*=-1;
+                }
+                if(t<=0){
+                    t=0;
+                    iSpeedY*=-1;
+                }
+                if(l<=0){
+                    l=0;
+                    iSpeedX*=-1;
+                }
+
+                oDiv.style.left=l+'px';
+                oDiv.style.top=t+'px';
+
+
+            },30);
+        };
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

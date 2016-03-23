@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+html,body{background:#efefef;}
+div{position:relative;width:700px;height:400px;margin:120px auto;}
+span{position:absolute;background:url(images/img/1.jpg) no-repeat;opacity:0;}
+</style>
+<script src="javascripts/tween.js"></script>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('box');
+	var oImg=oDiv.getElementsByTagName('img')[0];
+	var aPath=['0.jpg', '1.jpg', '2.jpg'];
+	var Row=4;
+	var Col=7;
+	
+	var W=700/Col;
+	var H=400/Row;
+	// 创建span
+	var aSpan=[];
+	for (var r=0; r<Row; r++)
+	{
+		for (var c=0; c<Col; c++)
+		{
+			var oSpan=document.createElement('span');
+			oSpan.style.width=W+'px';
+			oSpan.style.height=H+'px';
+			var top=r*H;
+			var left=c*W;
+			oSpan.style.top=top+'px';
+			oSpan.style.left=left+'px';
+			
+			oSpan.style.backgroundPosition='-'+left+'px  -'+top+'px';
+			
+			oDiv.appendChild(oSpan);
+			aSpan.push(oSpan);
+		}
+	}
+	
+	// 点击
+	var bFlag=false;
+	var now=0; // 第几次单击
+	oDiv.onclick=function (){
+		
+		if (bFlag)
+		{
+			return;
+		}
+		
+		bFlag=true;
+		
+		var n=0;
+		now++; // 1
+		
+		for (var i=0; i<aSpan.length; i++)
+		{
+			aSpan[i].style.opacity=0;
+			aSpan[i].style.backgroundImage=
+			'url(images/img/'+aPath[now%aPath.length]+')';
+		}
+		
+		var timer=setInterval(function (){
+			(function (index){
+				move(aSpan[n], {opacity:1}, {
+					complete:function (){
+						if (index == aSpan.length-1)
+						{
+							oImg.src='images/img/'+aPath[now%aPath.length];
+							bFlag=false;
+						}
+					}
+				});
+			})(n);
+			
+			n++;
+			
+			if (n == aSpan.length)
+				clearInterval(timer);
+		}, 100);
+	};
+};
+</script>
+</head>
+
+<body>
+	
+	<div class="box" id="box">
+		<img src="images/img/0.jpg" />
+	</div>
+</body>
+</html>

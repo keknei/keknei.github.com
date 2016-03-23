@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无限运动</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#273041;}
+div { position:absolute; top:100px; left:500px; height:100px; width:100px; background:red; border-radius:50%; }
+</style>
+<script src="javascripts/tween.js"></script>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');
+	
+	var aPos=[
+		{left:700, top:100},
+		{left:700, top:300},
+		{left:500, top:300},
+		{left:500, top:100}
+	];
+	
+	var n=0;
+	next();
+	
+	function next()
+	{
+		move(oDiv, aPos[n%aPos.length], {
+			complete:function (){
+				n++;
+				
+				next();
+			}	
+		});
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

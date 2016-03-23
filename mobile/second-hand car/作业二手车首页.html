@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+<title>无标题文档</title>
+</head>
+<style>
+*{margin:0;padding:0}
+ul{list-style:none;}
+.clearfix:after{display:block;content:'';clear:both;}
+.clearfix{zoom:1;}
+.big{max-width:680px;background:#f2f2f2;min-width:320px;margin:0 auto;}
+.header{width:100%;}
+.logo{float:left;background:url(img/car1.png) no-repeat;width:161px;height:26px;background-size:100%; text-indent:-99em;}
+.station{float:right;background:url(img/car2.png) no-repeat;width:1.875rem;background-size:25%;height:1rem;padding-left:15px;font-size:0.75rem;color:#333333;text-decoration:none;}
+.box_pic{margin-top:12px;position:relative;}
+.box_pic img{width:100%;border-top:1px solid #5f787e;vertical-align:middle;}
+.box_pic_show li{position:relative;display:none;}
+.box_pic_show .show{display:block;}
+.box_pic input{position:absolute;bottom:10px;left:10px;width:91%;height:36px;outline:none;background:url(img/car.jpg) no-repeat 14px 11px #fff;border:none 0;padding-left:36px;}
+.car_bus{background:#fff;width:100%;}
+.car_t{box-sizing:border-box;width:25%;float:left;border-right:1px solid #ccc;border-bottom:1px solid #eeeeee;text-align:center;}
+.text{display:block;padding-top:3px;font-size:0.75rem;color:#333333;padding-bottom:10px;}
+.car_t i{width:2.215rem;height:2.215rem;background:url(img/type-car.__1399949080__.png);background-size:100%;display:block;margin:0 auto;margin-top:10px;}
+.car_t a{font-size:12px;color:#333333;text-decoration:none;}
+.car_t_last{box-sizing:border-box;width:80px;float:left;border-right:none;text-align:center;}
+.car_t_last i{width:34px;height:34px;background:url(img/type-car.__1399949080__.png);background-size:100%;display:block;margin:0 auto;}
+.car_t_last a{font-size:12px;color:#333333;text-decoration:none;}
+
+
+.center{margin:0 auto;margin-top:10px;background:#fff;}
+.center_l{text-decoration:none;width:50%;box-sizing:border-box;border-top:1px solid #eeeeee;border-right:1px solid #eeeeee;border-bottom:1px solid #eeeeee;float:left;}
+.bt{font-size:0.875rem;color:#565a5b;margin-left:10px;margin-top:9px;}
+.bt2{font-size:0.75rem;color:#cacaca;margin-left:10px;margin-top:4px;}
+.center_l_pic{width:100%;}
+
+.center_r{float:left;width:50%;box-sizing:border-box;}
+.center_r_t{border-top:1px solid #eeeeee;border-left:1px solid #eeeeee;border-bottom:1px solid #eeeeee;display:block;}
+.center_r_t_l{float:left;}
+.center_r_t_pic{float:left;width:48%;}
+
+
+.money{background:url(img/car5.png) no-repeat left #fff;font-size:0.75rem;color:#333;padding-top:20px;padding-bottom:20px;padding-left:15px;line-height:100%;}
+.money2{background:#fff;}
+.money2 li{float:left;box-sizing:border-box;width:25%;}
+.money2 a{display:block;font-size:0.75rem;color:#333333;text-align:center;line-height:42px;border:1px solid #dddddd;border-left:none;text-decoration:none;}
+.money2 .last{border-right:none;}
+
+.money3{background:#fff;}
+.money3 li{float:left;box-sizing:border-box;width:25%;}
+.money3 a{display:block;font-size:0.75rem;color:#333333;text-align:center;border:1px solid #dddddd;border-left:none;text-decoration:none;}
+.money3 .last{border-right:none;}
+.money3_pic{width:100%;vertical-align:middle;}
+
+.dz{margin:0 auto;margin-top:10px;background:#fff;}
+.dz_l{float:left;width:50%;box-sizing:border-box;border-top:1px solid #eee;border-right:1px solid #eee;}
+.md{font-size:0.75rem;color:#333333;padding-left:12px;margin-top:16px;}
+.qg{font-size:0.75rem;color:#bababa;padding-left:12px;margin-top:5px;}
+.num{font-size:0.75rem;color:#ff5500;}
+.dz_l_l{float:left;}
+.dz_l_r{float:right;width:47%;}
+.dz_r_r{float:right;width:43%;}
+.dz_r{float:left;width:50%;box-sizing:border-box;border-top:1px solid #eee;border-left:1px solid #eee;}
+.dz_r a{display:block;float:left;}
+.dz_pic{width:100%;}
+.com{text-align:center;color:#999999;font-size:0.75rem;margin-top:20px;}
+.com a{text-align:center;color:#333333;font-size:0.75rem;text-decoration:none;}
+.phone{text-align:center;color:#999999;font-size:0.75rem;margin-top:15px;}
+.phone span{text-align:center;color:#ff5500;font-size:0.75rem;}
+
+.js{position:absolute;top:30px;right:30px;height:15px;background:#000;opacity:0.5;filter:alpha(opacity:50);padding-top:12px;}
+.js li{margin-right:10px;margin-left:10px;float:left;}
+.js_one{background:url(img/car10.png) no-repeat;width:0.312rem;height:0.312rem;}
+.js_two{background:url(img/car11.png) no-repeat;width:0.312rem;height:0.312rem;}
+@media screen and (min-width:400px){
+	
+	html{font-size:20px;}
+	}
+@media screen and (min-width:500px) and (max-width:600px) {
+	html{font-size:30px}
+	
+	}
+	
+@media screen and (min-width:600px){
+	html{font-size:40px}
+	}
+
+</style>
+<script>
+	window.onload=function(){
+		var oUl=document.getElementById('box')
+		var	oBut=oUl.getElementsByTagName('li')
+			
+		var oPic=document.getElementById('pic')
+		var oLi=oPic.getElementsByTagName('li')
+		
+			for (var i=0;i<oBut.length;i++){
+				oBut[i].index=i;
+				
+				oBut[i].onmouseover=function(){
+					for(var i=0;i<oBut.length;i++){
+						oBut[i].className='js_one';
+						oLi[i].className='';
+						 
+						}
+					this.className='js_two';
+					oLi[this.index].className='show'
+					}
+				
+				}
+		}
+
+</script>
+<body>
+	<div class="big">
+        <div class="header clearfix">
+            <h3 class="logo">二手车</h3>
+            <a href="#" class="station">北京</a>
+        </div>
+        <div class="box_pic">
+            <ul class="box_pic_show" id="pic">
+                <li class="show"><img src="img/car3.png" />
+                    <input type="text" placeholder="请输入关键字">
+                </li>
+                <li><img src="img/car12.png" />
+                    <input type="text" placeholder="请输入关键字">
+                </li>
+                <li><img src="img/car13.png" />
+                    <input type="text" placeholder="请输入关键字">
+                </li>
+            </ul>
+            <ul class="js" id="box">
+            	<li class="js_one"></li>
+                <li class="js_two"></li>
+                <li class="js_one"></li>
+            </ul>
+        </div>
+        <div class="car_bus">
+            <ul class="clearfix">
+                <li class="car_t">
+                    <a href="#"><i></i></a>
+                    <a href="#" class="text">图一</a>
+                </li>
+                <li class="car_t">
+                    <a href="#"><i></i></a>
+                    <a href="#" class="text">图一</a>
+                </li>
+                <li class="car_t">
+                    <a href="#"><i></i></a>
+                    <a href="#" class="text">图一</a>
+                </li>            
+                <li class="car_t">
+                    <a href="#"><i></i></a>
+                    <a href="#" class="text">图一</a>
+                </li>
+            </ul>
+        </div>
+        <div class="center clearfix">
+            <a href="#" class="center_l">
+                <p class="bt">贾永生有车</p>
+                <p class="bt2">家用省油 家用逮捕</p>
+                <img src="img/car1.jpg" class="center_l_pic" />
+            </a>
+            <div class="center_r">
+                <a href="#" class="center_r_t clearfix">
+                    <div class="center_r_t_l">
+                        <p class="bt">新手练车</p>
+                        <p class="bt2">8万封顶</p>
+                    </div>
+                    <img src="img/car4.png" class="center_r_t_pic" />
+                </a>
+                <a href="#" class="center_r_t clearfix">
+                    <div class="center_r_t_l">
+                        <p class="bt">新手练车</p>
+                        <p class="bt2">8万封顶</p>
+                    </div>
+                    <img src="img/car4.png" class="center_r_t_pic" />
+                </a>
+            </div>
+        </div>
+        
+        <h3 class="money">价格</h3>
+        <div class="money2">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last">3万以下</a>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last">3万以下</a>
+                </li>
+            </ul>
+        </div>
+        <h3 class="money">价格</h3>
+        <div class="money3">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last"><img src="img/car6.png" class="money3_pic" />3万以下</a>
+                </li>
+            </ul>
+        </div>
+        
+        <h3 class="money">价格</h3>
+        <div class="money2">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last">3万以下</a>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#">3万以下</a>
+                </li>
+                <li>
+                    <a href="#" class="last">3万以下</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="dz clearfix">
+            <div class="dz_l clearfix">
+                <div class="dz_l_l">
+                    <p class="md">门店</p>
+                    <p class="qg">全国 <span class="num">752</span> 家</p>
+                </div>
+                <img src="img/car7.png"  class="dz_l_r" />
+            </div>
+            <div class="dz_r">
+                <a>
+                    <p class="md">我要加盟</p>
+                    <p class="qg">造福从此开始</p>
+                </a>
+                <img src="img/car8.png" class="dz_r_r" />
+            </div>
+            <img src="img/car9.png" class="dz_pic">
+        </div>
+    </div>
+    <p class="com"><a href="#">电脑版</a> | <a href="#">问题丹奎</a> | <a href="#">客户端</a></p>
+    <p class="phone">全国统一客服热线  <span>400-60000-274</span></p>
+</body>
+</html>

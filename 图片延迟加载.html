@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#273041;}
+ul { overflow:hidden; width:576px; margin:0 auto; }
+li { float:left; width:170px; height:200px; border:1px solid #ccc; margin:10px; list-style:none; }
+img { display:block; width:100%; height:100%;}
+</style>
+<script>
+window.onload=window.onscroll=window.onresize=function (){
+	var aImg=document.getElementsByTagName('img');
+	
+	var clientTop=document.documentElement.clientHeight;
+	var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+	var top=clientTop+scrollTop;
+	
+	for (var i=0;i<aImg.length;i++)
+	{
+		if (top+100 > getPos(aImg[i]).top)
+		{
+			var _src=aImg[i].getAttribute('_src');
+			//console.log(getPos(aImg[i]).top)
+			aImg[i].src=_src;
+		}
+	}
+		
+	function getPos(obj)
+	{
+		var top=0;
+		var left=0;
+		while(obj)
+		{
+			left+=obj.offsetLeft;
+			top+=obj.offsetTop;
+			obj=obj.offsetParent;
+		}
+		return {left:left,top:top};
+	}
+};
+</script>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<img _src="images/31.jpg" src="test.png" />
+		</li>
+		<li>
+			<img _src="images/32.jpg" src="test.png" />
+		</li>
+		<li>
+			<img _src="images/33.jpg" src="test.png" />
+		</li>
+		<li>
+			<img _src="images/34.jpg" src="test.png" />
+		</li>
+		<li>
+			<img _src="images/35.jpg" />
+		</li>
+		<li>
+			<img _src="images/36.jpg" />
+		</li>
+		<li>
+			<img _src="images/37.jpg" />
+		</li>
+		<li>
+			<img _src="images/38.jpg" />
+		</li>
+		<li>
+			<img _src="images/39.jpg" />
+		</li>
+		<li>
+			<img _src="images/40.jpg" />
+		</li>
+		<li>
+			<img _src="images/41.jpg" />
+		</li>
+		<li>
+			<img _src="images/42.jpg" />
+		</li>
+		<li>
+			<img _src="images/43.jpg" />
+		</li>
+		<li>
+			<img _src="images/44.jpg" />
+		</li>
+		<li>
+			<img _src="images/45.jpg" />
+		</li>
+		<li>
+			<img _src="images/46.jpg" />
+		</li>
+		<li>
+			<img _src="images/47.jpg" />
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

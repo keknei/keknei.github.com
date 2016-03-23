@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+*{margin:0;padding:0;list-style:none;}
+.clearfix:after{display:block;content:'';clear:both;}
+.clearfix{zoom:1;}
+html{font-size:20px;}
+.header{width:16rem;}
+.back{width:3.05rem;height:1.625rem;float:left;margin-top:0.5rem;margin-left:0.5rem;}
+.back a{display:block;width:100%;height:100%;background:url(img/back.jpg) no-repeat;background-size:100%;}
+h1{width:3.7rem;height:1rem;float:left;background:url(img/logo.jpg) no-repeat;background-size:100%;margin-top:0.75rem;margin-left:2.5rem;}
+
+.center{width:16rem;overflow:hidden;margin-top:0.5rem;}
+.center_img{width:80rem;}
+.center_img li{float:left;width:16rem;height:7.875rem;}
+.center_img img{width:100%;height:100%;}
+.center_btn{width:3.75rem;margin:0 auto;margin-top:0.5rem;} 
+.center_btn li{float:left;border-radius:50%;width:0.5rem;height:0.5rem;background:#ccc;margin-left:0.2rem;}
+
+.nav{}
+.nav_box{width:13.5rem;margin:0 auto;}
+.nav_box .nav_one{margin-left:0;}
+.nav_one a{background:url(img/opa1.png) no-repeat;width:0.8rem;height:0.725rem;background-size:100%;display:block;position:absolute;top:50%;left:50%;margin-left:-0.4rem;margin-top:-0.362rem;}
+.nav_bk{position:relative;margin-left:1.75rem;background:url(img/color_red.jpg) no-repeat;width:2rem;height:2rem;border-radius:50%;background-size:100%;margin-top:1rem;float:left;}
+.nav_box span{margin-top:2.5rem;display:block;}
+.nav_text{float:left;text-align:center;font-size:0.6rem;color:#999999;font-weight:bold;margin-top:0.45rem;margin-left:1.75rem;width:2rem;}
+
+.ph{width:15rem;border-bottom:4px solid #dcdcdc;margin:0 auto;margin-top:1.6rem;padding-bottom:0.5rem;margin-bottom:0.75rem;}
+.ph i{float:left;width:0.1rem;height:0.75rem;background:url(img/cell.jpg) no-repeat;background-size:100%;}
+.ph p{float:left;font-size:0.7rem;font-weight:bold;margin-left:0.45rem;}
+.ph span{float:right;font-size:0.7rem;font-weight:bold;}
+.hostop{width:15rem;margin:0 auto;}
+.hostop li{margin-bottom:0.5rem;}
+.hostop_num{width:1.5rem;height:3rem;background:#e00202;font-size:1.09rem;text-align:center;line-height:3rem;color:#ffffff;font-weight:bold;float:left;}
+.hostop_img{float:left;background:url(img/yif.jpg) no-repeat;background-size:100%;width:4.5rem;height:3rem;}
+.hostop_con{width:9rem;height:3rem;float:left;background:#f4f4f4;}
+.hostop_con_left{float:left;}
+.hostop_con_middle{float:right;}
+.hostop_con_right{float:right;}
+.hostop_con_left{margin-top:0.75rem;margin-left:0.5rem;}
+.hostop_con_left p{font-size:0.6rem;line-height:0.93rem;color:#999999;font-family:'Microsoft Yahei';}
+.hostop_con_left span{color:#c7223d;}
+.hostop_con_left i{color:#c7223d; text-decoration:line-through;color:#999999;}
+.hostop_con_middle{font-family:'Microsoft Yahei';color:#d51938;font-size:0.8rem;margin-top:1rem;margin-right:0.45rem;}
+.hostop_con_right{background:url(img/sanj.png) no-repeat;background-size:100%;width:0.325rem;height:0.55rem;margin-top:1.3rem;margin-right:0.75rem;}
+.must{width:15rem;margin:0 auto;height:2rem;text-align:center;line-height:2rem;background:#f5f5f5;color:#666;font-size:0.7rem;margin-top:0.35rem;}
+.shopping{width:15rem;margin:0 auto;margin-top:0.9rem;}
+.shopping div{background:url(img/shop.jpg) no-repeat;background-size:100%;width:3.75rem;height:8.8rem;float:left;}
+.shopping ul{float:left;width:11.2rem;border-bottom:1px solid #ccc;}
+.shopping li{float:left;width:3.68rem;height:2.15rem;text-align:center;line-height:2.15rem;border-top:1px solid #ccc;border-right:1px solid #ccc;color:#999999;font-size:0.7rem;}
+
+.zd{width:15rem;margin:0 auto;margin-top:1rem;}
+.zd div{width:5rem;height:5rem;float:left;}
+.apple{background:#38a4f1;}
+.zd i{width:0.95rem;height:1.1rem;display:block;margin-top:0.75rem;margin-left:2rem;padding-bottom:0.875rem;}
+.apple i{background:url(img/apple.png) no-repeat;background-size:100%;}
+.andriod i{background:url(img/andriod.png) no-repeat;background-size:100%;}
+.yuan i{background:url(img/yuan.png) no-repeat;background-size:100%;}
+.andriod{background:#8bca11;}
+.yuan{background:#ff7404;}
+.zd p{text-align:center;font-size:0.7rem;color:#fff;}
+.login{width:100%;height:2.2rem;background:#f8f8f8;margin-top:0.5rem;}
+.login a{line-height:2.2rem;color:#333;font-size:0.65rem;}
+.login_one{margin-left:0.75rem;}
+.login_two{margin-left:1.15rem;}
+.login_three{margin-left:8rem;display:inline-block;}
+.login_three i{background:url(img/top.png) no-repeat;background-size:100%;display:inline-block;width:0.425rem;height:0.225rem;margin-bottom:0.09rem;margin-left:0.2rem;}
+
+.download{width:100%;height:7.5rem;background:#eeeeee;text-align:center;padding-top:1.1rem;}
+.download a{font-size:0.7rem;color:#333;}
+.download p{font-size:0.55rem;color:#999999;margin-top:0.8rem;margin-bottom:0.65rem;}
+.download div{background:url(img/jhusuan.png) no-repeat;width:13rem;height:4.45rem;display:inline-block;background-size:100%;}
+</style>
+<script>
+	window.onload=window.onresize=function (){
+		document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';	
+	};
+</script>
+</head>
+
+<body>
+	<div class="clearfix header">
+		<div class="back"><a href="javascript:;"></a></div>
+		<h1></h1> 
+	</div>
+	<div class="center">
+		<div class="center_img">
+			<ul class="clearfix">
+				<li><img src="img/xxk1.jpg" /></li>
+				<li><img src="img/xxk2.jpg" /></li>
+				<li><img src="img/xxk1.jpg" /></li>
+				<li><img src="img/xxk2.jpg" /></li>
+				<li><img src="img/xxk1.jpg" /></li>
+			</ul>
+		</div>
+		<div class="center_btn">
+			<ul class="clearfix">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav">
+		<ul class="nav_box clearfix">
+			<li class="nav_bk nav_one"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_text nav_one">商品</li>
+			<li class="nav_text">商品</li>
+			<li class="nav_text">商品</li>
+			<li class="nav_text">聚宝盆</li>
+			<li class="nav_bk nav_one"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_bk"><a href="javascript:;"></a></li>
+			<li class="nav_text nav_one">商品</li>
+			<li class="nav_text">商品</li>
+			<li class="nav_text">商品</li>
+			<li class="nav_text">聚宝盆</li>
+		</ul>
+	</div>
+	<div class="ph clearfix">
+		<i></i>
+		<p>聚划算热卖排行</p>
+		<span>TOP10</span>
+	</div>
+	<ul class="hostop">
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="hostop_num">1</div>
+			<div class="hostop_img"></div>
+			<div class="hostop_con clearfix">
+				<div class="hostop_con_left">
+					<p>已售&nbsp;28413</p>
+					<p><span>2.3折&nbsp;</span>￥<i>299</i></p>
+				</div>
+				<div class="hostop_con_right"></div>
+				<div class="hostop_con_middle">￥51</div>
+			</div>
+		</li>
+	</ul>
+	<div class="must">更多划算&nbsp;逛起来!</div>
+	<div class="shopping clearfix">
+		<div></div>
+		<ul>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+		</ul>
+	</div>
+	<div class="must">更多划算&nbsp;逛起来!</div>
+	<div class="shopping clearfix">
+		<div></div>
+		<ul>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+		</ul>
+	</div>
+	<div class="must">更多划算&nbsp;逛起来!</div>
+	<div class="shopping clearfix">
+		<div></div>
+		<ul>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+			<li>服饰</li>
+		</ul>
+	</div>
+	<div class="must">更多划算&nbsp;逛起来!</div>
+	<div class="zd clearfix">
+		<div class="apple">
+			<i></i>
+			<p>ios客户端</p>
+		</div>
+		<div class="andriod">
+			<i></i>
+			<p>安卓客户端</p>
+		</div>
+		<div class="yuan">
+			<i></i>
+			<p>意见反馈</p>
+		</div>
+	</div>
+	<div class="login">
+		<a href="javascript:;" class="login_one">登录</a>
+		<a href="javascript:;" class="login_two">注册</a>
+		<a href="javascript:;" class="login_three">TOP<i></i></a>
+	</div>
+	<div class="download">
+		<a>标准版</a>&nbsp;
+		<a>电脑版</a>
+		<p>@2014浙B2-20080224 服务中心</p>
+		<div></div>
+	</div>
+</body>
+</html>

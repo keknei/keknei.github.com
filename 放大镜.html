@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>放大镜</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#efefef;}
+div { overflow:hidden; position:absolute; top:150px; width:310px; height:310px; }
+#div1 { left:350px; background:url(images/m1.jpg) no-repeat; }
+span { display:none; position:absolute; top:0; left:0; width:100px; height:100px; background:yellow; opacity:0.3; }
+#div2 { display:none; left:680px; }
+img { position:absolute; top:0; left:0; }
+</style>
+<script>
+window.onload=function (){
+	var oDiv1=document.getElementById('div1');
+	var oDiv2=document.getElementById('div2');
+	var oSpan=document.getElementById('span1');	
+	var oImg=document.getElementById('img1');
+	
+	var maxLeft=0;
+	var maxTop=0;
+	var maxImgLeft=0;
+	var maxImgTop=0;
+	oDiv1.onmouseover=function (){
+		
+		oSpan.style.display='block';
+		oDiv2.style.display='block';
+		
+		maxLeft=oDiv1.offsetWidth-oSpan.offsetWidth;
+		maxTop=oDiv1.offsetHeight-oSpan.offsetHeight;
+		maxImgLeft=oImg.offsetWidth-oDiv2.offsetWidth;
+		maxImgTop=oImg.offsetHeight-oDiv2.offsetHeight;
+	};
+	oDiv1.onmouseout=function (){
+		oSpan.style.display='none';	
+		oDiv2.style.display='none';
+	};
+	
+	oDiv1.onmousemove=function (ev){
+		var oEvent=ev || event;
+		var left=oEvent.clientX-oDiv1.offsetLeft-oSpan.offsetWidth/2;
+		var top=oEvent.clientY-oDiv1.offsetTop-oSpan.offsetHeight/2;
+		
+		if (top<0)
+		{
+			top=0;
+		}
+		else if (top>maxTop)
+		{
+			top=maxTop;
+		}
+		
+		if (left<0)
+		{
+			left=0;
+		}
+		else if (left>maxLeft)
+		{
+			left=maxLeft;
+		}
+		
+		oSpan.style.top=top+'px';
+		oSpan.style.left=left+'px';
+		
+		var a1=left;
+		var b1=maxLeft;
+		var a2=maxImgLeft;
+		var b2=a1/b1*a2;
+		
+		var c1=top;
+		var d1=maxTop;
+		var c2=maxImgTop;
+		var d2=top/maxTop*maxImgTop;
+		oImg.style.left=-b2+'px';
+		oImg.style.top=-d2+'px';
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div1">
+		<span id="span1"></span>
+	</div>
+	
+	<div id="div2">
+		<img src="images/b1.jpg" id="img1" />
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>拖动切换</title>
+<style>
+* { margin:0; padding:0; }
+html{background:#000;}
+#div1 { position:relative; width:1000px; height:600px; margin:20px auto;overflow:hidden; }
+ul { position:absolute; top:50%; margin-top:-150px; height:300px; left:0; }
+li { position:relative; float:left; width:200px; height:300px; list-style:none; }
+
+img { display:block; width:100%; }
+
+</style>
+<script>
+window.onload=function (){
+	var oUl=document.getElementById('ul1');
+	var oDiv=document.getElementById('div1');
+	var aLi=oUl.children;
+	var w=aLi[0].offsetWidth;
+	oUl.style.width=w*aLi.length+'px';
+	var nCenter=oDiv.offsetWidth/2;
+	// 放大
+	var aImg=document.getElementsByTagName('img');
+	// 测试
+	//var aSpan=document.getElementsByTagName('span');
+	
+	// 左边
+	// var nMaxLeft=nCenter-w/2;
+	var nMaxLeft=nCenter-(1-0.5)*w;
+	
+	// 右边
+	var nMinLeft=nCenter-(aLi.length-0.5)*w;
+	
+	// 默认
+	oUl.style.left=nCenter-(5-0.5)*w+'px';
+	enlarge();
+	
+	oUl.onmousedown=function (ev){
+		var oEvent=ev || event;
+		var disX=oEvent.clientX-oUl.offsetLeft;
+		
+		document.onmousemove=function (ev){
+			var oEvent=ev || event;
+			var left=oEvent.clientX-disX;
+			
+			if (left < nMinLeft)
+			{
+				left=nMinLeft;
+			}
+			else if (left > nMaxLeft)
+			{
+				left=nMaxLeft;
+			}
+			
+			oUl.style.left=left+'px';
+			
+			// 放大
+			enlarge();
+		};
+		
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+		
+		return false;
+	};
+	
+	function enlarge()
+	{
+		for (var i=0; i<aLi.length; i++)
+		{
+			var dis=Math.abs(aLi[i].offsetWidth/2+aLi[i].offsetLeft+oUl.offsetLeft-nCenter);
+			
+			var scale=1-dis/500;
+			(scale<0.5) && (scale=0.5);
+			//aSpan[i].innerHTML=scale.toFixed(2);
+			
+			aImg[i].style.width=scale*300+'px';
+			aImg[i].style.height=scale*400+'px';
+			
+			aImg[i].style.marginLeft=(200-aImg[i].offsetWidth)/2+'px';
+			aImg[i].style.marginTop=(300-aImg[i].offsetHeight)/2+'px';
+			
+			aLi[i].style.zIndex=scale*100;
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+	
+	<div id="div1">
+		<ul id="ul1">
+			<li><img src="images/492a605d18468110bf5b2c74d70f45b2.jpg" /></li>
+			<li><img src="images/492a605d18468110bf5b2c74d70f45b3.jpg" /></li>
+			<li><img src="images/492a605d18468110bf5b2c74d70f45b1.jpg" /></li>
+			<li><img src="images/492a605d18468110bf5b2c74d70f45b4.jpg" /></li>
+			<li><img src="images/492a605d18468110bf5b2c74d70f45b5.jpg" /></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

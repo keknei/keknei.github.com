@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>逐渐打印字体</title>
+<style>
+body{background:#000;}
+span{font-size:30px;font-weight:bold;font-family:'Microsoft Yahei';color:rgba(255,255,255,0);text-align:center;text-shadow:0 0 100px #fff;opacity:0;transition:1s all ease;}
+.show{opacity:1;text-shadow:0 0 0 #fff;}
+</style>
+<script>
+window.onload=function (){
+	var str='有马云和刘强东的地方，就有口水战。上周末，亚布力论坛上，针对电商部门要不要砍掉的问题，观点截然相反。刘强东认为，传统企业应该砍掉电商部门，应该把更多的精力，无论是时间还是财务，用在产品研发、品牌推广上，销售管道的事儿，应该交给零售商，交给代理商，交给经销商，自己没必要成立一个电商部门，弄一个庞大的团队。';
+	for (var i=0;i<str.length;i++)
+	{
+		var oSpan=document.createElement('span');	
+		oSpan.innerHTML=str.charAt(i);
+		document.body.appendChild(oSpan);
+	}	
+	
+	var iNow=0;
+	var timer=null;
+	var aSpan=document.body.children;
+	timer=setInterval(function (){
+		aSpan[iNow].className='show';
+		
+		iNow++;
+		
+		if (iNow==str.length)
+		{
+			clearInterval(timer);	
+		}	
+	},100);
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>

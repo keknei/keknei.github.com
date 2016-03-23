@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>园运动</title>
+<style>
+* { margin:0; padding:0; }
+html,body{background:#273041;}
+div { position:relative; width:400px; height:400px; margin:80px auto; border:1px solid #ccc; border-radius:50%; }
+span { position:absolute; width:100px; height:100px; background:red; margin-top:-50px; left:50%; margin-left:-50px; border-radius:50%; }
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');	
+	var R=oDiv.offsetWidth/2;
+	var total=5;
+	
+	for (var i=0; i<total; i++)
+	{
+		var oSpan=document.createElement('span');
+		oDiv.appendChild(oSpan);
+	}
+	
+	var n=0;
+	
+	document.onclick=function (){
+		var aSpan=oDiv.children;
+		n++;
+		
+		if (n%2 == 1)
+		{
+			for (var i=0; i<aSpan.length; i++)
+			{
+				move(aSpan[i], i/total*360);
+			}
+		}
+		else
+		{
+			for (var i=0; i<aSpan.length; i++)
+			{
+				move(aSpan[i], 0);
+			}
+		}
+	};
+	
+	function move(obj, target)
+	{
+		var start=obj.a || 0;
+		var dis=target-start;
+		var count=Math.floor(1000/30);
+		var n=0;
+		
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function (){
+			n++;
+			
+			// 角度
+			var a=start+dis*n/count;
+			var x=R+Math.sin(a2d(a))*R;
+			var y=R-Math.cos(a2d(a))*R;
+			
+			obj.style.left=x+'px';
+			obj.style.top=y+'px';
+			
+			
+			if (n == count)
+			{
+				clearInterval(obj.timer);
+				obj.a=target;
+			}
+		}, 30);
+	}
+	
+	
+};
+// 角度变弧度
+function a2d(a)
+{
+	return a*Math.PI/180;
+}
+</script>
+</head>
+
+<body>
+	<div id="div1">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>照片墙</title>
+<style>
+html,body{background:#efefef;}
+*{margin:0;padding:0;}
+ul{overflow:hidden;width:510px;height:510px;list-style:none;margin:50px auto;}
+li{width:150px;height:150px;float:left;margin:10px;}
+img{width:100%;height:100%;}
+
+
+</style>
+<script src="javascripts/tween.js"></script>
+<script>
+window.onload=function (){
+	var oUl=document.getElementById('box');
+	var aLi=oUl.children;
+	var zIndex=1;
+	
+	var aPos=[];
+	for (var i=0;i<aLi.length;i++)
+	{
+		aPos.push({
+			left:aLi[i].offsetLeft,
+			top:aLi[i].offsetTop	
+		});
+	}
+	
+	for (var i=0;i<aLi.length;i++)
+	{
+		aLi[i].style.position='absolute';
+		aLi[i].style.top=aPos[i].top+'px';
+		aLi[i].style.left=aPos[i].left+'px';
+		aLi[i].style.margin=0;
+	}
+	
+	for (var i=0;i<aLi.length;i++)
+	{
+		aLi[i].index=i;
+		drag(aLi[i]);
+	}
+	
+	function drag(obj)
+	{
+		obj.onmousedown=function (ev){
+			var oNear=null;
+			var oEvent=ev || event;
+			var disY=oEvent.clientY-obj.offsetTop;
+			var disX=oEvent.clientX-obj.offsetLeft;
+			obj.style.zIndex=zIndex++;
+			document.onmousemove=function (ev){
+				var oEvent=ev || event;
+				var left=oEvent.clientX-disX;
+				var top=oEvent.clientY-disY;
+				
+				obj.style.top=top+'px';
+				obj.style.left=left+'px';
+				oNear=findNear(obj);
+				
+					
+			};	
+			document.onmouseup=function (){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				
+				if (oNear)
+				{
+					move(obj,aPos[oNear.index]);
+					move(oNear,aPos[obj.index]);
+					var tmp=obj.index;
+					obj.index=oNear.index;
+					oNear.index=tmp;
+					
+					for (var i=0;i<aLi.length;i++)
+					{
+						aLi[i].className='';
+					}
+				}
+				else
+				{
+					move(obj,aPos[obj.index]);	
+				}
+			};
+			obj.setCapture && obj.setCapture();
+			return false;
+		};
+	}
+	
+	function findNear(obj)
+	{
+		var nMin=99999;
+		var nMinIndex=-1;
+		
+		for (var i=0;i<aLi.length;i++)
+		{
+			if (obj != aLi[i])
+			{
+				if (collText(obj,aLi[i]))
+				{
+					var dis=getDis(obj,aLi[i])
+					if (dis<nMin)
+					{
+						nMin=dis;
+						nMinIndex=i;
+						
+					}
+				}
+			}
+		}
+		if (nMinIndex != -1)
+		{
+			//alert(aLi[nMinIndex])
+			return aLi[nMinIndex];
+		}
+		else
+		{
+			return null;	
+		}
+	}
+	
+	function collText(obj1,obj2)
+	{
+		var t1=obj1.offsetTop;
+		var b1=t1+obj1.offsetHeight;
+		var l1=obj1.offsetLeft;
+		var r1=l1+obj1.offsetWidth;
+		
+		var t2=obj2.offsetTop;
+		var b2=t2+obj2.offsetHeight;
+		var l2=obj2.offsetLeft;
+		var r2=l2+obj2.offsetWidth;
+		
+		if (l1>r2 || r1<l2 || t1>b2 || t2>b1)
+		{
+			return false;	
+		}
+		else
+		{
+			return true;	
+		}
+	}
+	
+	function getDis(obj1,obj2)
+	{
+		var a=obj1.offsetLeft+obj1.offsetWidth/2-(obj2.offsetLeft+obj2.offsetWidth/2);
+		var b=obj1.offsetTop+obj1.offsetHeight/2-(obj2.offsetTop+obj2.offsetHeight/2);
+		
+		return Math.sqrt(a*a+b*b);
+	}
+};
+</script>
+</head>
+
+<body>
+	<div>
+		<ul id="box">
+			<li>
+				<img src="images/cat/1.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/2.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/3.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/4.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/5.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/6.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/7.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/8.jpg" />
+			</li>
+			<li>
+				<img src="images/cat/9.jpg" />
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
